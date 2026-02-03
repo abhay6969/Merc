@@ -1,6 +1,8 @@
+import { demoGenerate } from "./functions";
 import { inngest } from "@/inngest/client";
 import { serve } from "inngest/next";
-import { demoGenerate} from "./functions";
+
+export const dynamic = "force-dynamic";
 
 export const {GET,POST,PUT} = serve({
   client:inngest,
