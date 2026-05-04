@@ -21,7 +21,7 @@ interface ProjectsCommandsDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const getProjectIcons = (data: Doc<"projects">) => {
+const getProjectIcons = (data: Doc<"project">) => {
   if (data?.importStatus === "completed")
     return <FaGithub className="size-4 text-muted-foreground" />;
   if (data?.importStatus === "importing")

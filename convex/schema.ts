@@ -2,7 +2,7 @@ import {defineSchema,defineTable} from "convex/server";
 import {v} from "convex/values";
 
 export default defineSchema({
-  projects: defineTable({
+  project: defineTable({
     name: v.string(),
     ownerId: v.string(),
     updatedAt: v.optional(v.number()),
