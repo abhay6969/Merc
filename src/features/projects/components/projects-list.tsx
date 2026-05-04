@@ -16,14 +16,14 @@ interface ProjectsListProps {
   onViewAll: () => void;
 }
 
-const getProjectIcons = (data: Doc<"projects">) => {
+const getProjectIcons = (data: Doc<"project">) => {
   if(data?.importStatus === "completed") return <FaGithub className="size-3.5 text-muted-foreground" />;
   if(data?.importStatus === "importing") return <Spinner className="size-3.5 text-muted-foreground" />;
   if(data?.importStatus === "failed") return <XIcon className="size-3.5 text-muted-foreground" />;
   return <GlobeIcon className="size-3.5 text-muted-foreground" />;
 }
 
-const ContinueCard = ({ data }: { data: Doc<"projects"> }) => {
+const ContinueCard = ({ data }: { data: Doc<"project"> }) => {
   return (
     <div className="flex flex-col gap-2">
       <span className="text-xs text-muted-foreground">Last Updated</span>
@@ -31,7 +31,7 @@ const ContinueCard = ({ data }: { data: Doc<"projects"> }) => {
         variant="outline"
         className="h-auto items-start justify-start p-4 bg-background border rounded-none flex flex-col gap-2"
       >
-        <Link href={`/projects/${data?._id}`} className="group">
+        <Link href={`/project/${data?._id}`} className="group">
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-2">
               {getProjectIcons(data)}
@@ -48,7 +48,7 @@ const ContinueCard = ({ data }: { data: Doc<"projects"> }) => {
   );
 }
 
-const ProjectItem = ({ data }: { data: Doc<"projects"> }) => {
+const ProjectItem = ({ data }: { data: Doc<"project"> }) => {
   return (
 
       <Link href={`/projects/${data._id}`} className="text-sm text-foreground/60 font-medium hover:text-foreground py-1 flex items-center justify-between gap-2 transition-colors group">
@@ -84,7 +84,7 @@ export const ProjectsList = ({ onViewAll }: ProjectsListProps) => {
           </div>
           <ul className="flex flex-col">
             {rest.map((project) => (
-              <ProjectItem key={project._id} data={project as Doc<"projects">} />
+              <ProjectItem key={project._id} data={project as Doc<"project">} />
             ))}
           </ul>
         </div>

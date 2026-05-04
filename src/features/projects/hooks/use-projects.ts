@@ -8,9 +8,16 @@ export const useProjects = () => {
   return useQuery(api.projects.get);
 }
 
-export const usePartialProjects = ({limit}: {limit: number}) => {
-  return useQuery(api.projects.getPartial, {limit});
-}
+export const usePartialProjects = ({ limit }: { limit: number }) => {
+  return useQuery(api.projects.getPartial, { limit });
+};
+
+export const useProject = (projectId: Id<"project"> | null) => {
+  return useQuery(
+    api.projects.getById,
+    projectId === null ? "skip" : { id: projectId }
+  );
+};
 
 export const useCreateProject = () => {
   const { userId } = useAuth();
@@ -19,15 +26,43 @@ export const useCreateProject = () => {
       if (userId == null) return;
       const existingProjects = localStore.getQuery(api.projects.get);
       if (existingProjects === undefined) return;
-      const now = Date.now();
+      const now = new Date().getTime();
       const newProject = {
-        _id: crypto.randomUUID() as Id<"projects">,
+        _id: crypto.randomUUID() as Id<"project">,
         _creationTime: now,
         name: args.name,
         ownerId: userId,
         updatedAt: now,
       };
       localStore.setQuery(api.projects.get, {}, [newProject, ...existingProjects]);
+    }
+  );
+};
+
+export const useRenameProject = (projectId: Id<"project">) => {
+  return useMutation(api.projects.rename).withOptimisticUpdate(
+    (localStore, args) => {
+      const existingProjects = localStore.getQuery(api.projects.getById, { id: args.id });
+      if (existingProjects !== undefined && existingProjects !== null) {
+        localStore.setQuery(api.projects.getById, { id: args.id }, {
+          ...existingProjects,
+          name: args.name,
+          updatedAt: new Date().getTime(),
+        });
+      }
+
+      const existingProject = localStore.getQuery(api.projects.get);
+      if (existingProject !== undefined){
+        localStore.setQuery(api.projects.get, {}, 
+          existingProject.map((project)=>{
+            return project._id === args.id ? {
+              ...project,
+              name: args.name,
+              updatedAt: new Date().getTime(),
+            } : project;
+          })
+        );
+      }
     }
   );
 };

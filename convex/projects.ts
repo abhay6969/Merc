@@ -8,7 +8,7 @@ export const create = mutation({
   },
   handler: async (ctx, args) => {
     const identity = await verifyAuth(ctx);
-    const projectId = ctx.db.insert("projects", {
+    const projectId = ctx.db.insert("project", {
       name: args.name,
       ownerId: identity.subject,
       updatedAt: Date.now(),
@@ -22,9 +22,9 @@ export const getPartial = query({
   handler: async (ctx,args) => {
     const identity = await verifyAuth(ctx);
     return await ctx.db
-      .query("projects")
-      .withIndex("by_owner", (q) => q.eq("ownerId", identity.subject)).order
-      ("desc")
+      .query("project")
+      .withIndex("by_owner", (q) => q.eq("ownerId", identity.subject))
+      .order("desc")
       .take(args.limit);
   },
 });
@@ -34,9 +34,42 @@ export const get = query({
   handler: async (ctx) => {
     const identity = await verifyAuth(ctx);
     return await ctx.db
-      .query("projects")
-      .withIndex("by_owner", (q) => q.eq("ownerId", identity.subject)).order
-      ("desc")
+      .query("project")
+      .withIndex("by_owner", (q) => q.eq("ownerId", identity.subject))
+      .order("desc")
       .collect();
+  },
+});
+
+export const getById = query({
+  args: { id: v.id("project") },
+  handler: async (ctx, args) => {
+    const identity = await verifyAuth(ctx);
+    const project = await ctx.db.get(args.id);
+    if (project == null) return null;
+    if (project.ownerId !== identity.subject) return null;
+    return project;
+  },
+});
+
+export const rename = mutation({
+  args: {
+    id: v.id("project"),
+    name: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const identity = await verifyAuth(ctx);
+    const project = await ctx.db.get(args.id);
+    if(!project){
+      throw new Error("Project not found");
+    }
+    if(project.ownerId !== identity.subject){
+      throw new Error("Unauthorized");
+    }
+
+    await ctx.db.patch(args.id, {
+      name: args.name,
+      updatedAt: Date.now(),
+    });
   },
 });
