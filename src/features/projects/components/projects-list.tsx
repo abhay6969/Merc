@@ -31,7 +31,7 @@ const ContinueCard = ({ data }: { data: Doc<"project"> }) => {
         variant="outline"
         className="h-auto items-start justify-start p-4 bg-background border rounded-none flex flex-col gap-2"
       >
-        <Link href={`/project/${data?._id}`} className="group">
+        <Link href={`/projects/${data?._id}`} className="group">
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-2">
               {getProjectIcons(data)}

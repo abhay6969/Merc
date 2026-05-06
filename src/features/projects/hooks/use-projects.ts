@@ -39,7 +39,7 @@ export const useCreateProject = () => {
   );
 };
 
-export const useRenameProject = (projectId: Id<"project">) => {
+export const useRenameProject = () => {
   return useMutation(api.projects.rename).withOptimisticUpdate(
     (localStore, args) => {
       const existingProjects = localStore.getQuery(api.projects.getById, { id: args.id });
