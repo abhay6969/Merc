@@ -8,6 +8,7 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Allotment } from "allotment";
 import FileExplorer from "./file-explorar";
+import { EditorView } from "@/features/editor/components/editor-view";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -99,8 +100,8 @@ export const ProjectIdView = ({
             >
               <FileExplorer projectId={projectId} />
             </Allotment.Pane>
-            <Allotment.Pane preferredSize={DEFAULT_MAIN_SIZE}>
-              <div>Editor</div>
+            <Allotment.Pane preferredSize={DEFAULT_MAIN_SIZE} className="min-h-0">
+              <EditorView projectId={projectId} />
             </Allotment.Pane>
           </Allotment>
         </div>

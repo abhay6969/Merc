@@ -17,6 +17,13 @@ export const useDeleteFile = () => {
   return useMutation(api.files.deleteFile)
 }
 
+export const useFile = (fileId: Id<"files"> | null) => {
+  return useQuery(
+    api.files.getFile,
+    fileId ? { id: fileId } : "skip",
+  );
+};
+
 export const useFolderContents = ({
   projectId,
   parentId,

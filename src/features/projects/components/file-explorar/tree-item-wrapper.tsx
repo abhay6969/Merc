@@ -24,8 +24,8 @@ export const TreeItemWrapper = ({
   onDoubleClick:()=>void, 
   onRename:()=>void, 
   onDelete:()=>void, 
-  onCreateFile:()=>void, 
-  onCreateFolder:()=>void,
+  onCreateFile?:()=>void, 
+  onCreateFolder?:()=>void,
 }) => {
   return (
     <ContextMenu>
