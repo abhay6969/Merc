@@ -43,7 +43,7 @@ export const demoGenerate = inngest.createFunction(
 
     return await step.run("generate-text", async () => {
       const out = await generateText({
-        model: google("gemini-2.5-flash"),
+        model: google("gemini-2.0-flash"),
         prompt: finalPrompt,
         experimental_telemetry:{
           isEnabled: true,

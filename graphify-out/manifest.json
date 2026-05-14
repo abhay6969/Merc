@@ -1,0 +1,526 @@
+{
+  "C:\\DEV\\merc\\eslint.config.mjs": {
+    "mtime": 1770011572.4674778,
+    "hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "C:\\DEV\\merc\\next-env.d.ts": {
+    "mtime": 1770012477.764513,
+    "hash": "d0f8375ae1199dc7acd3977fc33b78b8"
+  },
+  "C:\\DEV\\merc\\next.config.ts": {
+    "mtime": 1770184526.2183733,
+    "hash": "ca6766e1ea0dd4c7d3708bee191c2ef4"
+  },
+  "C:\\DEV\\merc\\postcss.config.mjs": {
+    "mtime": 1770011572.484045,
+    "hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "C:\\DEV\\merc\\sentry.edge.config.ts": {
+    "mtime": 1770186324.1307068,
+    "hash": "d55f47eb52a08495b9cba2485a0fe293"
+  },
+  "C:\\DEV\\merc\\sentry.server.config.ts": {
+    "mtime": 1770186347.6090078,
+    "hash": "946549b68c2ceafd3785607bd1bdc20b"
+  },
+  "C:\\DEV\\merc\\convex\\auth.config.ts": {
+    "mtime": 1770027502.1162417,
+    "hash": "0b60cfcb9cfe879dc6ff1007f174fe73"
+  },
+  "C:\\DEV\\merc\\convex\\auth.ts": {
+    "mtime": 1770191387.4943855,
+    "hash": "346671c6d6ce97b0b808b45af2a41c21"
+  },
+  "C:\\DEV\\merc\\convex\\files.ts": {
+    "mtime": 1778067789.48104,
+    "hash": "4871d028864243d5ca9b32b8195e525a"
+  },
+  "C:\\DEV\\merc\\convex\\projects.ts": {
+    "mtime": 1770373216.8867137,
+    "hash": "bdbf0833c954b26e97cb453f582b063a"
+  },
+  "C:\\DEV\\merc\\convex\\schema.ts": {
+    "mtime": 1777877193.1324892,
+    "hash": "2af4c83d23d130ac18adbf0251f74573"
+  },
+  "C:\\DEV\\merc\\convex\\_generated\\api.d.ts": {
+    "mtime": 1777877323.9880733,
+    "hash": "09397fbaefd5cfba44b73b8b9dbf8151"
+  },
+  "C:\\DEV\\merc\\convex\\_generated\\api.js": {
+    "mtime": 1770018069.6940277,
+    "hash": "ea14005171d3e17b1b28a7139ad36d62"
+  },
+  "C:\\DEV\\merc\\convex\\_generated\\dataModel.d.ts": {
+    "mtime": 1770026069.0367637,
+    "hash": "af87bff09394971f8debeb5b8e9f8a70"
+  },
+  "C:\\DEV\\merc\\convex\\_generated\\server.d.ts": {
+    "mtime": 1770018069.6860268,
+    "hash": "a6d3e29e1cd98c6a0ebcf82d5074009e"
+  },
+  "C:\\DEV\\merc\\convex\\_generated\\server.js": {
+    "mtime": 1770018069.6345985,
+    "hash": "cfc7a4ed084119abac0e51d79f525f4f"
+  },
+  "C:\\DEV\\merc\\src\\instrumentation-client.ts": {
+    "mtime": 1770184526.112463,
+    "hash": "3a1f48e5e9b8e24e61eca7e46b03c45a"
+  },
+  "C:\\DEV\\merc\\src\\instrumentation.ts": {
+    "mtime": 1770184526.1074536,
+    "hash": "f1a88b2d0309631d0c8c1987cd43c0bc"
+  },
+  "C:\\DEV\\merc\\src\\proxy.ts": {
+    "mtime": 1770015005.2865996,
+    "hash": "09c71866bb352a940943c9ce3458a929"
+  },
+  "C:\\DEV\\merc\\src\\app\\global-error.tsx": {
+    "mtime": 1770184526.2314153,
+    "hash": "4c37831085c8a6bddee26fbcd9912368"
+  },
+  "C:\\DEV\\merc\\src\\app\\layout.tsx": {
+    "mtime": 1770358316.9633615,
+    "hash": "6aeb911dbc6bef3f84f53482d8f9afb4"
+  },
+  "C:\\DEV\\merc\\src\\app\\page.tsx": {
+    "mtime": 1770375093.5002553,
+    "hash": "bb47972c6aaa6fdb502b2755a2f004f2"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\editor\\quick-edit\\route.ts": {
+    "mtime": 1778757295.1032531,
+    "hash": "ba5e6a3aa55fe0ee61c0ca89dc806c59"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\editor\\suggestions\\prompts.ts": {
+    "mtime": 1778682154.6672528,
+    "hash": "08bf430ab0ad87b84687e2103a391cf7"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\inngest\\functions.ts": {
+    "mtime": 1778682154.6672528,
+    "hash": "cc1e665a356ae54c492cdd772c729447"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\inngest\\route.ts": {
+    "mtime": 1770380408.2772176,
+    "hash": "c77fb4293df5d6118f0c0242fca7684b"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\suggestion\\route.ts": {
+    "mtime": 1778755797.819792,
+    "hash": "9f0459f46f76635758d39f6026a7d078"
+  },
+  "C:\\DEV\\merc\\src\\app\\projects\\[projectId]\\layout.tsx": {
+    "mtime": 1770373421.8203135,
+    "hash": "4ed0e9e19b4841092cd2ff6eeee5ed5a"
+  },
+  "C:\\DEV\\merc\\src\\app\\projects\\[projectId]\\page.tsx": {
+    "mtime": 1770377277.9089153,
+    "hash": "ae123b54ece3d7bb4f5dbf917af25c78"
+  },
+  "C:\\DEV\\merc\\src\\components\\providers.tsx": {
+    "mtime": 1770358283.7510705,
+    "hash": "df32499293dba23412aeb187ecb13122"
+  },
+  "C:\\DEV\\merc\\src\\components\\theme-provider.tsx": {
+    "mtime": 1770012824.9015791,
+    "hash": "2a792f4f5c42cacba7e910bf6a648147"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\accordion.tsx": {
+    "mtime": 1770012298.722919,
+    "hash": "6f5ac2a39c951069d52ef56e1375d70a"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\alert-dialog.tsx": {
+    "mtime": 1770012303.5076265,
+    "hash": "74ad7a57946216b7560d06eaeb9307fd"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\alert.tsx": {
+    "mtime": 1770012298.8387997,
+    "hash": "8e59179ed2f0f6e33320d0081b9782fa"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\aspect-ratio.tsx": {
+    "mtime": 1770012298.934052,
+    "hash": "be7a9b030095db724fb3d9ca4e62293c"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\avatar.tsx": {
+    "mtime": 1770012299.0287998,
+    "hash": "be7fcb2f9efe6761117d2891c11589d7"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\badge.tsx": {
+    "mtime": 1770012299.1352496,
+    "hash": "954746d35a0ed6aeba5415fbb4fada31"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\breadcrumb.tsx": {
+    "mtime": 1778682154.6622581,
+    "hash": "14763038175abd2410d97d8166c89480"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\button-group.tsx": {
+    "mtime": 1770012304.4062514,
+    "hash": "73a99a33fdbb8cf7742f0aad44829e25"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\button.tsx": {
+    "mtime": 1777886540.1709857,
+    "hash": "044dc3dfbcf76c72cb03e9ae8a25a9f9"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\calendar.tsx": {
+    "mtime": 1770012303.6366744,
+    "hash": "5d3fb01c5e7002fb7d8a3a9b7eb490da"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\card.tsx": {
+    "mtime": 1770012299.4150465,
+    "hash": "a6752f4d1da504c7f03196d90cde4b2c"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\carousel.tsx": {
+    "mtime": 1770012303.7639456,
+    "hash": "b28bf29b5dccd43ddfa5fd7d38e8517f"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\chart.tsx": {
+    "mtime": 1770012304.0246036,
+    "hash": "fda4a5662ef4c6d63fe3ae0323e502a5"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\checkbox.tsx": {
+    "mtime": 1770012299.5076005,
+    "hash": "4b0b973d7b0463443696a35f9f73743d"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\collapsible.tsx": {
+    "mtime": 1770012299.6026504,
+    "hash": "3280feca735918afc1e61fa59ba6e3f3"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\combobox.tsx": {
+    "mtime": 1770012305.2688005,
+    "hash": "3fa4a26a6fe1e5e152a76262afea3e3b"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\command.tsx": {
+    "mtime": 1770012304.1499493,
+    "hash": "5632786c44eaa58e5110088afcfb48a6"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\context-menu.tsx": {
+    "mtime": 1770012299.705381,
+    "hash": "e427ed2770f6d3a8018481c61f90d24b"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\dialog.tsx": {
+    "mtime": 1770012299.8179846,
+    "hash": "f1a1f40caa86d72f9863b966b4f61c54"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\direction.tsx": {
+    "mtime": 1770012299.914456,
+    "hash": "87b2e543828b0ac3444de56cfd0016d0"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\drawer.tsx": {
+    "mtime": 1770012300.026623,
+    "hash": "d2f77e51ad7cefcf112c855235a172dc"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\dropdown-menu.tsx": {
+    "mtime": 1770012300.134296,
+    "hash": "4d34f2b82c3880388c0eda72d38365dc"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\empty.tsx": {
+    "mtime": 1770012300.2363462,
+    "hash": "82cc505b749945f1cc9ff2f28cca5010"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\field.tsx": {
+    "mtime": 1770012304.5472188,
+    "hash": "0ea02c68f77c8b04bbb73d1db489bf7d"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\form.tsx": {
+    "mtime": 1770012304.274697,
+    "hash": "cc761fa32f15b47f7cacf623f48b115f"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\hover-card.tsx": {
+    "mtime": 1770012300.3434806,
+    "hash": "a1010352934f4cdf860caa32491a3706"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\input-group.tsx": {
+    "mtime": 1770012304.8074124,
+    "hash": "0543d798938fe000ce50c08db1623194"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\input-otp.tsx": {
+    "mtime": 1770012300.5537543,
+    "hash": "2598c4a03345f4d67397f90c3fbbaddb"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\input.tsx": {
+    "mtime": 1770012300.4474792,
+    "hash": "6666f8369b53c79d39be8060dc6c4ce5"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\item.tsx": {
+    "mtime": 1770012304.678049,
+    "hash": "4e417a2db9cd3144bd5d1f2f0ad399fa"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\kbd.tsx": {
+    "mtime": 1770012300.654735,
+    "hash": "226fdb1bb271e6fe392e96e7742c28b2"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\label.tsx": {
+    "mtime": 1770012300.7565196,
+    "hash": "14f124762142b39a666ce10d3b42d28c"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\menubar.tsx": {
+    "mtime": 1770012300.8710759,
+    "hash": "f3836779da2e4f6a90dd7f2755f4c61e"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\native-select.tsx": {
+    "mtime": 1770012301.078512,
+    "hash": "53344d50500de6e1fcedc0b077dc8d17"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\navigation-menu.tsx": {
+    "mtime": 1770012300.9846392,
+    "hash": "bea6b8a7ef7d7e7d5dc09afe7631fb59"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\pagination.tsx": {
+    "mtime": 1770012303.8868477,
+    "hash": "ba23d7233a420983feef894ee045234d"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\path-segments.tsx": {
+    "mtime": 1778682154.640255,
+    "hash": "9649a0588dd95107fdd2ebea9a71bbd7"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\popover.tsx": {
+    "mtime": 1770012301.193029,
+    "hash": "a618794c4abdb76dc8772bd4d3584526"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\progress.tsx": {
+    "mtime": 1770012301.302265,
+    "hash": "d0578ee4fb52d86376172c83fb67a9ba"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\radio-group.tsx": {
+    "mtime": 1770012301.4078434,
+    "hash": "42634c5e24aebafa3f4ce9c91960dbfe"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\resizable.tsx": {
+    "mtime": 1770012301.5157547,
+    "hash": "e6bc37b4f3397d034e51f987d66ebd48"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\scroll-area.tsx": {
+    "mtime": 1770012301.6268752,
+    "hash": "360243727fcdcb4d509af4516aaa9d0d"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\select.tsx": {
+    "mtime": 1770012301.742386,
+    "hash": "d78565b69ac44fcfb81882c220697748"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\separator.tsx": {
+    "mtime": 1770012301.8799932,
+    "hash": "07b35dc35f811b26a1ee3982582ba9fb"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\sheet.tsx": {
+    "mtime": 1770012302.0337381,
+    "hash": "a69e9049863d785c9da4f240ee4204ca"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\sidebar.tsx": {
+    "mtime": 1770012305.117391,
+    "hash": "686da2b9988bb2320a83efa07b4bd551"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\skeleton.tsx": {
+    "mtime": 1770012302.226757,
+    "hash": "ee5017bac14efeda715feaceb488382a"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\slider.tsx": {
+    "mtime": 1770012302.3434775,
+    "hash": "d2fa780e560966380be921f5fda38615"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\sonner.tsx": {
+    "mtime": 1770012302.4572196,
+    "hash": "5dde0d04f3ecf6b5e812104aca12c546"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\spinner.tsx": {
+    "mtime": 1770012302.5694273,
+    "hash": "28b695734ef3b6840b47d713ae3d31ce"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\switch.tsx": {
+    "mtime": 1770012302.6829555,
+    "hash": "3e457b110df27e2bc1a14d09685ab42e"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\table.tsx": {
+    "mtime": 1770012302.7976503,
+    "hash": "531bf830b5f3b399abe3fd453157cdb7"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\tabs.tsx": {
+    "mtime": 1770012302.924157,
+    "hash": "0dd9822489a22ec32f891edfbd341e59"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\textarea.tsx": {
+    "mtime": 1770012303.0399148,
+    "hash": "04f9af2a78672f7018b16db2bcec5036"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\toggle-group.tsx": {
+    "mtime": 1770012304.9386613,
+    "hash": "8a88b73e1bd8a1e51d5bb7df527e00cb"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\toggle.tsx": {
+    "mtime": 1770012303.1588068,
+    "hash": "df65c0dfce4225ad57a1901b01580f54"
+  },
+  "C:\\DEV\\merc\\src\\components\\ui\\tooltip.tsx": {
+    "mtime": 1770012303.2737992,
+    "hash": "34079b3ac4d0eb8851c6cab74bd68e00"
+  },
+  "C:\\DEV\\merc\\src\\features\\auth\\components\\auth-loading-view.tsx": {
+    "mtime": 1770034326.093104,
+    "hash": "63ec44f384d82c148a450292378c3ae9"
+  },
+  "C:\\DEV\\merc\\src\\features\\auth\\components\\unauthenticated-view.tsx": {
+    "mtime": 1770037174.0453744,
+    "hash": "0427d58df16067f1675ea65735b13379"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\components\\code-editor.tsx": {
+    "mtime": 1778757296.0992544,
+    "hash": "b039020cf25a328b19ebbb7e573cd7b3"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\components\\editor-file-breadcrumb.tsx": {
+    "mtime": 1778682154.633254,
+    "hash": "7c94e6becee53a5be8849b3fa3806764"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\components\\editor-view.tsx": {
+    "mtime": 1778757296.1002543,
+    "hash": "e3311a5c187b27a2a55e8ce46635d90b"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\components\\merc-logo.tsx": {
+    "mtime": 1778682154.633254,
+    "hash": "ae9706746c081f7aa0e144fad9b9cb52"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\components\\quick-edit-bar.tsx": {
+    "mtime": 1778757296.103253,
+    "hash": "8542a29f83cc5269e4c8da711d03e159"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\components\\top-navigation.tsx": {
+    "mtime": 1778571669.0955791,
+    "hash": "621cab01cf0335743d5c243c2da3e4fe"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\extensions\\custom-basic-setup.ts": {
+    "mtime": 1778682154.6672528,
+    "hash": "5845d3a366a3bf19b9060deca49b7361"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\extensions\\language-extensions.ts": {
+    "mtime": 1778682154.640255,
+    "hash": "027f51930d5b7fefe09f414eb9ef02c9"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\extensions\\minimap.ts": {
+    "mtime": 1778682154.634256,
+    "hash": "db538f3b86499c42dbdcdb4c6f51ef73"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\extensions\\suggestions\\index.ts": {
+    "mtime": 1778682155.6332543,
+    "hash": "0c7a9109c8970681fa295f1335adf5d0"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\extensions\\suggestions\\suggestion-extension.ts": {
+    "mtime": 1778757296.1022527,
+    "hash": "ff6b3a0aa78d2e49e62db1861f61062d"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\extensions\\suggestions\\suggestion-fetcher.ts": {
+    "mtime": 1778682154.634256,
+    "hash": "1b1177cfa6ee802f3c83d07e1ecdcf6e"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\hooks\\use-editor.ts": {
+    "mtime": 1778571656.8884096,
+    "hash": "9722b04437d91f90e1412150b0d0c78f"
+  },
+  "C:\\DEV\\merc\\src\\features\\editor\\store\\use-editor-store.ts": {
+    "mtime": 1778571647.5364769,
+    "hash": "25dab244eef03014c728e781e13002a0"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\navbar.tsx": {
+    "mtime": 1770376560.1742928,
+    "hash": "6c8924a96143991df892bd4d55b8a1fb"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\project-id-layout.tsx": {
+    "mtime": 1770377139.5245535,
+    "hash": "f528f41bc3c6e82b49c340aa7ed55bdb"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\project-id-view.tsx": {
+    "mtime": 1778571699.8060386,
+    "hash": "4d0eed0d4c32b275ab493dfb58b9c903"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\projects-commands-dialong.tsx": {
+    "mtime": 1770373271.4239254,
+    "hash": "6a382be74c5406adfef8606147951b3c"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\projects-list.tsx": {
+    "mtime": 1777987215.791887,
+    "hash": "f2a64598772fed3c0ed95298926ab5d2"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\projects-view.tsx": {
+    "mtime": 1770357964.462816,
+    "hash": "575dbe936934ae258d6dec9a9796619b"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\constants.ts": {
+    "mtime": 1777901325.441991,
+    "hash": "8ae73e2988a2b02bbec7ef9818c2653a"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\create-input.tsx": {
+    "mtime": 1778060692.4046552,
+    "hash": "775bbfcc2403b173e0bb1e3c41e894db"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\index.tsx": {
+    "mtime": 1777987964.718995,
+    "hash": "baec1442ffc8308d1bc518553aa19cbf"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\loading-row.tsx": {
+    "mtime": 1777902137.090352,
+    "hash": "cc97581a1b573c93d2e3fa2b220ebb4f"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\rename-input.tsx": {
+    "mtime": 1778062331.6274884,
+    "hash": "0b6cd1cfed54aa638e5655e70eff4b67"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\tree-item-wrapper.tsx": {
+    "mtime": 1778067211.3204336,
+    "hash": "b9f7f851ab7b9b42444a024a00468d13"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\tree.tsx": {
+    "mtime": 1778067275.9911697,
+    "hash": "75ff8b076cc6363bc415cef1805af81a"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\hooks\\use-files.ts": {
+    "mtime": 1778682154.6672528,
+    "hash": "4b192ffac0c2449393e0f5fe7cdcda33"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\hooks\\use-projects.ts": {
+    "mtime": 1778581901.343888,
+    "hash": "a57c8c4c424878519a7ea4734181c9b9"
+  },
+  "C:\\DEV\\merc\\src\\hooks\\use-mobile.ts": {
+    "mtime": 1770012303.3878012,
+    "hash": "209b5193af16624cdd89d3591480dd48"
+  },
+  "C:\\DEV\\merc\\src\\inngest\\client.ts": {
+    "mtime": 1770185435.2388792,
+    "hash": "bde28a254e4f601bae79b04cd3f30208"
+  },
+  "C:\\DEV\\merc\\src\\lib\\editor-doc-scrape.ts": {
+    "mtime": 1778757295.0992541,
+    "hash": "5c1cd631300415e749270eef584f67b8"
+  },
+  "C:\\DEV\\merc\\src\\lib\\firecrawl.ts": {
+    "mtime": 1770056527.552093,
+    "hash": "da7d28da008ce0da8f8952feaf0acfaa"
+  },
+  "C:\\DEV\\merc\\src\\lib\\utils.ts": {
+    "mtime": 1770012179.0203924,
+    "hash": "5a6fd53fdcf2be529e9cc0b718fde352"
+  },
+  "C:\\DEV\\merc\\README.md": {
+    "mtime": 1770011572.4474542,
+    "hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "C:\\DEV\\merc\\public\\file.svg": {
+    "mtime": 1770011572.4900458,
+    "hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "C:\\DEV\\merc\\public\\globe.svg": {
+    "mtime": 1770011572.4992962,
+    "hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "C:\\DEV\\merc\\public\\logo.svg": {
+    "mtime": 1770357382.2771556,
+    "hash": "9f205feae56272bbb01b830b0731568d"
+  },
+  "C:\\DEV\\merc\\public\\next.svg": {
+    "mtime": 1770011572.512547,
+    "hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "C:\\DEV\\merc\\public\\vercel.svg": {
+    "mtime": 1770011572.5229604,
+    "hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "C:\\DEV\\merc\\public\\window.svg": {
+    "mtime": 1770011572.5279605,
+    "hash": "a2760511c65806022ad20adf74370ff3"
+  }
+}

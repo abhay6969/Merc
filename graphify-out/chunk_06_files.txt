@@ -1,0 +1,15 @@
+src/features/projects/components/file-explorar/constants.ts
+src/features/projects/components/file-explorar/create-input.tsx
+src/features/projects/components/file-explorar/index.tsx
+src/features/projects/components/file-explorar/loading-row.tsx
+src/features/projects/components/file-explorar/rename-input.tsx
+src/features/projects/components/file-explorar/tree-item-wrapper.tsx
+src/features/projects/components/file-explorar/tree.tsx
+src/features/projects/hooks/use-files.ts
+src/features/projects/hooks/use-projects.ts
+src/hooks/use-mobile.ts
+src/inngest/client.ts
+src/lib/editor-doc-scrape.ts
+src/lib/firecrawl.ts
+src/lib/utils.ts
+README.md
