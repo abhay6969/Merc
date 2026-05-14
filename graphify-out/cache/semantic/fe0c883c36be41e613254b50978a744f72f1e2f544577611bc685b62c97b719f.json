@@ -1,0 +1,1 @@
+{"nodes": [{"id": "n_txtarea", "label": "Textarea", "source_file": "src/components/ui/textarea.tsx", "file_type": "code", "knowledge": "INFERRED"}, {"id": "f_textarea", "label": "textarea.tsx", "kind": "file", "file_type": "code", "source_file": "src/components/ui/textarea.tsx", "provenance": "EXTRACTED"}], "edges": [], "hyperedges": []}
