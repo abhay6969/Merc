@@ -3,22 +3,16 @@
 import { Id } from "../../../../convex/_generated/dataModel";
 import { useProject } from "../hooks/use-projects";
 import { cn } from "@/lib/utils";
-import { Poppins } from "next/font/google";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Allotment } from "allotment";
 import FileExplorer from "./file-explorar";
 import { EditorView } from "@/features/editor/components/editor-view";
 
-const font = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
 const MIN_SIDEBAR_WIDTH = 200;
 const MAX_SIDEBAR_WIDTH = 800;
 const DEFAULT_SIDEBAR_WIDTH = 350;
-const DEFAULT_MAIN_SIZE = 1000;
+const DEFAULT_EDITOR_MAIN = 880;
 
 const Tab = ({label,isActive,onClick}:{label:string,isActive:boolean,onClick:()=>void})=>{
   return(
@@ -90,17 +84,21 @@ export const ProjectIdView = ({
           )}
         >
           <Allotment
-            defaultSizes={[DEFAULT_SIDEBAR_WIDTH, DEFAULT_MAIN_SIZE]}
+            defaultSizes={[DEFAULT_SIDEBAR_WIDTH, DEFAULT_EDITOR_MAIN]}
           >
             <Allotment.Pane
               snap
               minSize={MIN_SIDEBAR_WIDTH}
               maxSize={MAX_SIDEBAR_WIDTH}
               preferredSize={DEFAULT_SIDEBAR_WIDTH}
+              className="min-h-0"
             >
               <FileExplorer projectId={projectId} />
             </Allotment.Pane>
-            <Allotment.Pane preferredSize={DEFAULT_MAIN_SIZE} className="min-h-0">
+            <Allotment.Pane
+              preferredSize={DEFAULT_EDITOR_MAIN}
+              className="min-h-0"
+            >
               <EditorView projectId={projectId} />
             </Allotment.Pane>
           </Allotment>

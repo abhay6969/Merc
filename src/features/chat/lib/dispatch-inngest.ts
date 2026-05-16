@@ -1,0 +1,34 @@
+/** Fire Inngest events from the browser via Next.js (INNGEST_DEV handles routing). */
+
+export async function dispatchMessageSent(payload: {
+  assistantMessageId: string;
+  conversationId: string;
+  projectId: string;
+  nonce: string;
+  modelId: string;
+}): Promise<void> {
+  const res = await fetch("/api/chat/dispatch", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(body.error ?? `Dispatch failed (${res.status})`);
+  }
+}
+
+export async function dispatchMessageCancel(payload: {
+  assistantMessageId: string;
+  nonce: string;
+}): Promise<void> {
+  const res = await fetch("/api/chat/cancel", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(body.error ?? `Cancel dispatch failed (${res.status})`);
+  }
+}

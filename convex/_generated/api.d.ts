@@ -9,7 +9,12 @@
  */
 
 import type * as auth from "../auth.js";
+import type * as conversations from "../conversations.js";
 import type * as files from "../files.js";
+import type * as http from "../http.js";
+import type * as lib_chatModels from "../lib/chatModels.js";
+import type * as lib_projectAccess from "../lib/projectAccess.js";
+import type * as messages from "../messages.js";
 import type * as projects from "../projects.js";
 
 import type {
@@ -20,7 +25,12 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
+  conversations: typeof conversations;
   files: typeof files;
+  http: typeof http;
+  "lib/chatModels": typeof lib_chatModels;
+  "lib/projectAccess": typeof lib_projectAccess;
+  messages: typeof messages;
   projects: typeof projects;
 }>;
 
