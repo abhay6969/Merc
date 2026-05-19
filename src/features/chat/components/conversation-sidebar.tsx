@@ -137,11 +137,10 @@ export function ConversationSidebar({
     <div
       className={cn(
         "flex h-full min-h-0 min-w-0 flex-col",
-        variant === "dockLeft" &&
-          "border-r border-border/70 bg-sidebar/30",
-        variant === "dockRight" &&
-          "border-l border-border/70 bg-sidebar/30",
-        variant === "embeddedLeft" && "border-0 bg-sidebar",
+        "bg-gradient-to-b from-[#0f172a] via-[#0f172a] to-[#0b1220]",
+        variant === "dockLeft" && "border-r border-white/[0.06]",
+        variant === "dockRight" && "border-l border-white/[0.06]",
+        variant === "embeddedLeft" && "border-0",
       )}
     >
       <ConversationSidebarHeader

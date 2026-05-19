@@ -5,6 +5,7 @@ import { Terminal } from "@xterm/xterm";
 import { useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
+import { PreviewTerminalChrome } from "./preview-terminal-chrome";
 
 import "@xterm/xterm/css/xterm.css";
 
@@ -27,21 +28,42 @@ export function PreviewTerminal({ output, className }: PreviewTerminalProps) {
 
     const terminal = new Terminal({
       convertEol: true,
-      cursorBlink: false,
+      cursorBlink: true,
+      cursorStyle: "bar",
       disableStdin: true,
-      fontSize: 13,
+      fontSize: 12,
+      lineHeight: 1.35,
       fontFamily:
-        "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+        '"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
       theme: {
-        background: "#0a0a0a",
-        foreground: "#e5e5e5",
-        cursor: "#e5e5e5",
+        background: "#0c0c0c",
+        foreground: "#d4d4d4",
+        cursor: "#22c55e",
+        cursorAccent: "#0c0c0c",
+        selectionBackground: "#264f78",
+        black: "#0c0c0c",
+        red: "#f14c4c",
+        green: "#23d18b",
+        yellow: "#f5f543",
+        blue: "#3b8eea",
+        magenta: "#d670d6",
+        cyan: "#29b8db",
+        white: "#d4d4d4",
+        brightBlack: "#666666",
+        brightRed: "#f14c4c",
+        brightGreen: "#23d18b",
+        brightYellow: "#f5f543",
+        brightBlue: "#3b8eea",
+        brightMagenta: "#d670d6",
+        brightCyan: "#29b8db",
+        brightWhite: "#ffffff",
       },
     });
 
     const fitAddon = new FitAddon();
     terminal.loadAddon(fitAddon);
     terminal.open(container);
+    terminal.writeln("\x1b[32m$\x1b[0m mercenary preview — waiting for output…");
     fitAddon.fit();
 
     terminalRef.current = terminal;
@@ -97,9 +119,11 @@ export function PreviewTerminal({ output, className }: PreviewTerminalProps) {
   }, [output]);
 
   return (
-    <div
-      ref={containerRef}
-      className={cn("h-full w-full min-h-0 bg-[#0a0a0a] p-1", className)}
-    />
+    <PreviewTerminalChrome className={className}>
+      <div
+        ref={containerRef}
+        className={cn("h-full w-full min-h-0 px-2 pb-2 pt-1")}
+      />
+    </PreviewTerminalChrome>
   );
 }

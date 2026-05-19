@@ -50,7 +50,7 @@ export function NewProjectDialog({ open, onOpenChange }: NewProjectDialogProps) 
           /* ignore */
         }
 
-        toast.success("Project created — Polaris is building");
+        toast.success("Project created — Mercenary is building");
         onOpenChange(false);
         router.push(`/projects/${projectId}`);
       } catch (e) {
@@ -78,7 +78,7 @@ export function NewProjectDialog({ open, onOpenChange }: NewProjectDialogProps) 
             New project
           </DialogTitle>
           <DialogDescription>
-            Describe what you want to build. Merc creates a project and starts
+            Describe what you want to build. Mercenary creates a project and starts
             the first AI response automatically.
           </DialogDescription>
         </DialogHeader>
@@ -92,7 +92,7 @@ export function NewProjectDialog({ open, onOpenChange }: NewProjectDialogProps) 
               <PromptInputTextarea
                 className="min-h-[88px] text-sm"
                 disabled={submitting}
-                placeholder="Ask Polaris to build…"
+                placeholder="Ask Mercenary to build…"
               />
             </PromptInputBody>
             <PromptInputFooter className="justify-end gap-2 px-2 pb-2">

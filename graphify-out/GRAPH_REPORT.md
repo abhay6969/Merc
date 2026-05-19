@@ -1,16 +1,16 @@
 # Graph Report - merc  (2026-05-19)
 
 ## Corpus Check
-- 263 files · ~83,027 words
+- 268 files · ~84,250 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2329 nodes · 4168 edges · 209 communities (149 shown, 60 thin omitted)
+- 2349 nodes · 4232 edges · 212 communities (147 shown, 65 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 34 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `33c37f1d`
+- Built from commit: `2ca666a1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -194,10 +194,13 @@
 - [[_COMMUNITY_Community 206|Community 206]]
 - [[_COMMUNITY_Community 207|Community 207]]
 - [[_COMMUNITY_Community 208|Community 208]]
+- [[_COMMUNITY_Community 209|Community 209]]
+- [[_COMMUNITY_Community 210|Community 210]]
+- [[_COMMUNITY_Community 211|Community 211]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `cn()` - 629 edges
-2. `Button()` - 45 edges
+1. `cn()` - 637 edges
+2. `Button()` - 46 edges
 3. `convexFetch()` - 44 edges
 4. `readConvexError()` - 33 edges
 5. `cn` - 24 edges
@@ -245,15 +248,15 @@
 - **Single-file public brand vector asset** — vercel_triangle_logomark, vercel_svg_vector_document, vercel_cloud_platform_brand [INFERRED 0.85]
 - **Single window chrome glyph composition** — window_glyph, window_frame, window_title_band, window_control_dots [EXTRACTED 1.00]
 
-## Communities (209 total, 60 thin omitted)
+## Communities (212 total, 65 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.15
 Nodes (24): createCodingAgent(), sanitizeStepKey(), titleAgent, generateTitleWithAgent(), heuristicTitleFromHistory(), isPlaceholderTitle(), maybeGenerateConversationTitle(), PLACEHOLDER_TITLES (+16 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.13
-Nodes (16): ImportGithubDialog(), NewProjectDialog(), ContinueCard(), formatTimestamp(), getProjectIcons(), ProjectItem(), ProjectsList(), ProjectsListProps (+8 more)
+Cohesion: 0.14
+Nodes (17): features, HomeLanding(), HomeLandingProps, ContinueCard(), formatTimestamp(), getProjectIcons(), ProjectItem(), ProjectsList() (+9 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.11
@@ -272,8 +275,8 @@ Cohesion: 0.19
 Nodes (21): CodingAgentState, createCreateFileTool(), createCreateFilesTool(), fileEntrySchema, createCreateFolderTool(), createDeleteFileTool(), createCodingAgentTools(), createListFilesTool() (+13 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.06
-Nodes (36): useIsMobile(), Sheet(), SheetContent(), SheetDescription(), SheetFooter(), SheetHeader(), SheetOverlay(), SheetTitle() (+28 more)
+Cohesion: 0.07
+Nodes (45): useIsMobile(), cn(), Checkbox(), RadioGroup(), RadioGroupItem(), ResizableHandle(), ResizablePanelGroup(), SheetHeader() (+37 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.24
@@ -288,8 +291,8 @@ Cohesion: 0.16
 Nodes (12): Field(), FieldContent(), FieldDescription(), FieldError(), FieldGroup(), FieldLabel(), FieldLegend(), FieldSeparator() (+4 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.12
-Nodes (24): formatConversationHistory(), HistoryMessage, formatProjectFileTree(), MessageSentEventPayload, messageSentEventSchema, parseMessageSentPayload(), AgentRunContext, PipelineSnapshot (+16 more)
+Cohesion: 0.11
+Nodes (26): formatConversationHistory(), HistoryMessage, formatProjectFileTree(), MessageSentEventPayload, messageSentEventSchema, parseMessageSentPayload(), AgentRunContext, PipelineSnapshot (+18 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.06
@@ -312,12 +315,12 @@ Cohesion: 0.07
 Nodes (33): parseConvexErrorMessage(), GenerationContext, ExportCancelData, ExportToGitHubData, ImportGitHubRepositoryData, inngest, MessageCancelData, MessageSentData (+25 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.18
-Nodes (10): ExportPopover(), Navbar(), EditorView, FileExplorer, font, PreviewView, ProjectIdView(), Tab() (+2 more)
+Cohesion: 0.21
+Nodes (8): ExportPopover(), EditorView, FileExplorer, font, PreviewView, ProjectIdView(), Tab(), useProject()
 
 ### Community 17 - "Community 17"
-Cohesion: 0.13
-Nodes (16): Conversation(), ConversationContent(), ConversationContentProps, ConversationDownload(), ConversationDownloadProps, ConversationEmptyState(), ConversationEmptyStateProps, ConversationProps (+8 more)
+Cohesion: 0.14
+Nodes (15): Conversation(), ConversationContent(), ConversationContentProps, ConversationDownload(), ConversationDownloadProps, ConversationEmptyState(), ConversationEmptyStateProps, ConversationProps (+7 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.23
@@ -328,8 +331,8 @@ Cohesion: 0.33
 Nodes (7): build(), classifyToolError(), isToolFailure(), StructuredToolError, ToolErrorCode, ToolResult, ToolSuggestedAction
 
 ### Community 20 - "Community 20"
-Cohesion: 0.17
-Nodes (11): UseWebContainerOptions, PreviewStatus, ProjectPreviewSettings, buildFileTree(), ensureDirectory(), getFilePath(), isTextProjectFile(), listSyncableTextFiles() (+3 more)
+Cohesion: 0.15
+Nodes (12): isLoadingStatus(), PreviewView(), PreviewViewProps, statusLabel(), useFiles(), useWebContainer(), UseWebContainerOptions, assertCrossOriginIsolatedForPreview() (+4 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.06
@@ -344,8 +347,8 @@ Cohesion: 0.2
 Nodes (11): AlertDialogAction, AlertDialogCancel, Button, buttonVariants (cva), Calendar, CalendarDayButton, CarouselContent, CarouselItem (+3 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.14
-Nodes (14): CodeEditor(), CodeEditorProps, addToChatShortcutLabel(), isApplePlatform(), QuickEditBar(), QuickEditBarProps, quickEditShortcutLabel(), QuickEditToolbarPosition (+6 more)
+Cohesion: 0.12
+Nodes (17): CodeEditor(), CodeEditorProps, addToChatShortcutLabel(), isApplePlatform(), QuickEditBar(), QuickEditBarProps, quickEditShortcutLabel(), QuickEditToolbarPosition (+9 more)
 
 ### Community 25 - "Community 25"
 Cohesion: 0.25
@@ -357,7 +360,7 @@ Nodes (16): MicSelector(), MicSelectorContent(), MicSelectorContentProps, MicSel
 
 ### Community 27 - "Community 27"
 Cohesion: 0.12
-Nodes (15): ConversationSidebarHeader(), ConversationSidebarHeaderProps, ConversationSidebarModelPicker(), PastConversationsDialog(), DropdownMenu(), DropdownMenuCheckboxItem(), DropdownMenuContent(), DropdownMenuItem() (+7 more)
+Nodes (11): Menubar(), MenubarCheckboxItem(), MenubarContent(), MenubarItem(), MenubarLabel(), MenubarRadioItem(), MenubarSeparator(), MenubarShortcut() (+3 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.33
@@ -368,8 +371,8 @@ Cohesion: 0.04
 Nodes (52): Commit(), CommitActions(), CommitActionsProps, CommitAuthor(), CommitAuthorAvatar(), CommitAuthorAvatarProps, CommitAuthorProps, CommitContent() (+44 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.05
-Nodes (40): Node(), NodeActionProps, NodeContent(), NodeContentProps, NodeDescriptionProps, NodeFooter(), NodeFooterProps, NodeHeader() (+32 more)
+Cohesion: 0.06
+Nodes (34): Node(), NodeActionProps, NodeContent(), NodeContentProps, NodeDescriptionProps, NodeFooter(), NodeFooterProps, NodeHeader() (+26 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.29
@@ -404,8 +407,8 @@ Cohesion: 0.11
 Nodes (21): Confirmation(), ConfirmationAccepted(), ConfirmationAcceptedProps, ConfirmationActionProps, ConfirmationActions(), ConfirmationActionsProps, ConfirmationContext, ConfirmationContextValue (+13 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.11
-Nodes (19): Agent, AgentContent, AgentContentProps, AgentHeader, AgentHeaderProps, AgentInstructions, AgentInstructionsProps, AgentOutput (+11 more)
+Cohesion: 0.12
+Nodes (18): Agent, AgentContent, AgentContentProps, AgentHeader, AgentHeaderProps, AgentInstructions, AgentInstructionsProps, AgentOutput (+10 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.11
@@ -492,12 +495,12 @@ Cohesion: 0.08
 Nodes (28): Attachment(), AttachmentContext, AttachmentContextValue, AttachmentData, AttachmentEmpty(), AttachmentEmptyProps, AttachmentHoverCardContent(), AttachmentHoverCardContentProps (+20 more)
 
 ### Community 147 - "Community 147"
-Cohesion: 0.09
-Nodes (29): Message(), MessageAction(), MessageActionProps, MessageActions(), MessageActionsProps, MessageBranch(), MessageBranchContent(), MessageBranchContentProps (+21 more)
+Cohesion: 0.07
+Nodes (36): Message(), MessageAction(), MessageActionProps, MessageActions(), MessageActionsProps, MessageBranch(), MessageBranchContent(), MessageBranchContentProps (+28 more)
 
 ### Community 148 - "Community 148"
 Cohesion: 0.08
-Nodes (28): ModelSelector(), ModelSelectorContent(), ModelSelectorContentProps, ModelSelectorDialogProps, ModelSelectorEmpty(), ModelSelectorEmptyProps, ModelSelectorGroup(), ModelSelectorGroupProps (+20 more)
+Nodes (27): ModelSelector(), ModelSelectorContent(), ModelSelectorContentProps, ModelSelectorDialogProps, ModelSelectorEmpty(), ModelSelectorEmptyProps, ModelSelectorGroup(), ModelSelectorGroupProps (+19 more)
 
 ### Community 149 - "Community 149"
 Cohesion: 0.06
@@ -512,8 +515,8 @@ Cohesion: 0.09
 Nodes (25): ContextCacheUsage(), ContextCacheUsageProps, ContextContent(), ContextContentBody(), ContextContentBodyProps, ContextContentFooter(), ContextContentFooterProps, ContextContentHeader() (+17 more)
 
 ### Community 152 - "Community 152"
-Cohesion: 0.09
-Nodes (22): OpenInChatGPT(), OpenInChatGPTProps, OpenInClaude(), OpenInClaudeProps, OpenInContent(), OpenInContentProps, OpenInContext, OpenInCursor() (+14 more)
+Cohesion: 0.06
+Nodes (36): OpenInChatGPT(), OpenInChatGPTProps, OpenInClaude(), OpenInClaudeProps, OpenInContent(), OpenInContentProps, OpenInContext, OpenInCursor() (+28 more)
 
 ### Community 153 - "Community 153"
 Cohesion: 0.08
@@ -524,8 +527,8 @@ Cohesion: 0.08
 Nodes (21): AudioPlayerControlBarProps, AudioPlayerDurationDisplay(), AudioPlayerDurationDisplayProps, AudioPlayerElementProps, AudioPlayerMuteButton(), AudioPlayerMuteButtonProps, AudioPlayerPlayButton(), AudioPlayerPlayButtonProps (+13 more)
 
 ### Community 155 - "Community 155"
-Cohesion: 0.12
-Nodes (18): Snippet(), SnippetAddonProps, SnippetContext, SnippetContextType, SnippetCopyButtonProps, SnippetInput(), SnippetInputProps, SnippetProps (+10 more)
+Cohesion: 0.11
+Nodes (19): Snippet(), SnippetAddonProps, SnippetContext, SnippetContextType, SnippetCopyButtonProps, SnippetInput(), SnippetInputProps, SnippetProps (+11 more)
 
 ### Community 156 - "Community 156"
 Cohesion: 0.1
@@ -536,16 +539,16 @@ Cohesion: 0.11
 Nodes (17): ChainOfThought, ChainOfThoughtContent, ChainOfThoughtContentProps, ChainOfThoughtContext, ChainOfThoughtContextValue, ChainOfThoughtHeader, ChainOfThoughtHeaderProps, ChainOfThoughtImage (+9 more)
 
 ### Community 158 - "Community 158"
-Cohesion: 0.6
-Nodes (3): useSelectedChatModel(), CHAT_MODEL_OPTIONS, ChatModelId
+Cohesion: 0.46
+Nodes (7): buildFileTree(), ensureDirectory(), getFilePath(), isTextProjectFile(), listSyncableTextFiles(), ProjectFile, setFileAtPath()
 
 ### Community 159 - "Community 159"
-Cohesion: 0.12
-Nodes (16): Artifact(), ArtifactAction(), ArtifactActionProps, ArtifactActions(), ArtifactActionsProps, ArtifactClose(), ArtifactCloseProps, ArtifactContent() (+8 more)
+Cohesion: 0.09
+Nodes (25): Artifact(), ArtifactAction(), ArtifactActionProps, ArtifactActions(), ArtifactActionsProps, ArtifactClose(), ArtifactCloseProps, ArtifactContent() (+17 more)
 
 ### Community 160 - "Community 160"
-Cohesion: 0.13
-Nodes (15): SandboxHeader(), getStatusBadge(), statusIcons, statusLabels, Tool(), ToolContent(), ToolContentProps, ToolHeader() (+7 more)
+Cohesion: 0.12
+Nodes (16): CodeBlock(), SandboxHeader(), getStatusBadge(), statusIcons, statusLabels, Tool(), ToolContent(), ToolContentProps (+8 more)
 
 ### Community 161 - "Community 161"
 Cohesion: 0.15
@@ -576,28 +579,28 @@ Cohesion: 0.25
 Nodes (12): PastConversationsDialogProps, ProjectsCommandsDialog(), ProjectsCommandsDialogProps, useProjects(), CommandDialog(), CommandEmpty(), CommandGroup(), CommandInput() (+4 more)
 
 ### Community 168 - "Community 168"
-Cohesion: 0.24
-Nodes (10): ImportGithubDialogProps, importSchema, NewProjectDialogProps, Dialog(), DialogContent(), DialogDescription(), DialogFooter(), DialogHeader() (+2 more)
+Cohesion: 0.18
+Nodes (13): ImportGithubDialog(), ImportGithubDialogProps, importSchema, NewProjectDialog(), NewProjectDialogProps, Dialog(), DialogContent(), DialogDescription() (+5 more)
 
 ### Community 169 - "Community 169"
 Cohesion: 0.12
 Nodes (23): google, extractUrlsFromText(), markdownFromScrapeResult(), scrapeUrlsToDocumentationMarkdown(), firecrawl, bodySchema, googleApiKey(), POST() (+15 more)
 
 ### Community 170 - "Community 170"
-Cohesion: 0.07
-Nodes (38): cn(), ComboboxChip(), ComboboxChips(), ComboboxChipsInput(), ComboboxClear(), ComboboxContent(), ComboboxEmpty(), ComboboxGroup() (+30 more)
+Cohesion: 0.12
+Nodes (13): ComboboxChip(), ComboboxChips(), ComboboxChipsInput(), ComboboxClear(), ComboboxContent(), ComboboxEmpty(), ComboboxGroup(), ComboboxInput() (+5 more)
 
 ### Community 171 - "Community 171"
 Cohesion: 0.22
 Nodes (9): PromptInput(), PromptInputBody(), PromptInputFooter(), PromptInputMessage, PromptInputSubmit(), PromptInputTextarea(), useOptionalPromptInputController(), ConversationSidebarComposer() (+1 more)
 
 ### Community 172 - "Community 172"
-Cohesion: 0.18
-Nodes (9): Select(), SelectContent(), SelectItem(), SelectLabel(), SelectScrollDownButton(), SelectScrollUpButton(), SelectSeparator(), SelectTrigger() (+1 more)
+Cohesion: 0.16
+Nodes (12): ExportPopoverProps, GithubExportInput, githubExportSchema, Select(), SelectContent(), SelectItem(), SelectLabel(), SelectScrollDownButton() (+4 more)
 
 ### Community 173 - "Community 173"
-Cohesion: 0.13
-Nodes (15): run, API_MODEL_BY_CHAT_ID, CHAT_MODEL_OPTIONS, ChatModelId, hasModelCapability(), ID_SET, isChatCompletionModelId(), MODEL_BY_ID (+7 more)
+Cohesion: 0.11
+Nodes (16): run, components, API_MODEL_BY_CHAT_ID, CHAT_MODEL_OPTIONS, ChatModelId, hasModelCapability(), ID_SET, isChatCompletionModelId() (+8 more)
 
 ### Community 174 - "Community 174"
 Cohesion: 0.29
@@ -616,12 +619,12 @@ Cohesion: 0.19
 Nodes (13): Carousel(), CarouselApi, CarouselContent(), CarouselContext, CarouselContextProps, CarouselItem(), CarouselNext(), CarouselOptions (+5 more)
 
 ### Community 178 - "Community 178"
-Cohesion: 0.17
-Nodes (22): bodySchema, POST(), bodySchema, POST(), POST(), bodySchema, POST(), convexFetch() (+14 more)
+Cohesion: 0.18
+Nodes (20): bodySchema, POST(), bodySchema, POST(), POST(), bodySchema, POST(), convexFetch() (+12 more)
 
 ### Community 180 - "Community 180"
-Cohesion: 0.22
-Nodes (12): ConversationSidebar(), ConversationSidebarProps, ConversationSidebarVariant, components, useConversation(), useCreateConversation(), useMessages(), useRequestCancelGeneration() (+4 more)
+Cohesion: 0.07
+Nodes (36): ConversationSidebar(), ConversationSidebarProps, ConversationSidebarVariant, ConversationSidebarHeader(), ConversationSidebarMobileSheet(), ConversationSidebar, ProjectIdLayout(), ProjectWorkspace() (+28 more)
 
 ### Community 181 - "Community 181"
 Cohesion: 0.5
@@ -640,24 +643,24 @@ Cohesion: 0.12
 Nodes (15): bootstrapAssistantTurnInternal, cancelProcessingForProject, cancelProcessingForProjectInternal, failAssistantInternal, finalizeAssistantInternal, getAssistantMessageInternal, getAssistantStatusInternal, getContextForGenerationInternal (+7 more)
 
 ### Community 185 - "Community 185"
-Cohesion: 0.23
-Nodes (10): FormControl(), FormDescription(), FormFieldContext, FormFieldContextValue, FormItem(), FormItemContext, FormItemContextValue, FormLabel() (+2 more)
+Cohesion: 0.2
+Nodes (11): FormControl(), FormDescription(), FormFieldContext, FormFieldContextValue, FormItem(), FormItemContext, FormItemContextValue, FormLabel() (+3 more)
 
 ### Community 186 - "Community 186"
-Cohesion: 0.22
-Nodes (10): font, RelativeTime(), RelativeTimeProps, Breadcrumb(), BreadcrumbEllipsis(), BreadcrumbItem(), BreadcrumbLink(), BreadcrumbList() (+2 more)
+Cohesion: 0.15
+Nodes (15): iconSizes, MercenaryLogo(), MercenaryLogoProps, font, Navbar(), RelativeTime(), RelativeTimeProps, useRenameProject() (+7 more)
 
 ### Community 187 - "Community 187"
 Cohesion: 0.24
 Nodes (11): EditorView(), MercLogo(), MercLogoProps, EditorTab(), TopNavigation(), useEditor(), useFile(), defaultTabState (+3 more)
 
 ### Community 190 - "Community 190"
-Cohesion: 0.21
-Nodes (9): Checkpoint(), CheckpointIcon(), CheckpointIconProps, CheckpointProps, CheckpointTriggerProps, Tooltip(), TooltipContent(), TooltipProvider() (+1 more)
+Cohesion: 0.4
+Nodes (3): InputOTP(), InputOTPGroup(), InputOTPSlot()
 
 ### Community 191 - "Community 191"
-Cohesion: 0.16
-Nodes (15): ExportPopoverProps, PreviewSettingsPopover(), PreviewSettingsPopoverProps, settingsSchema, useUpdateProjectSettings(), GithubExportInput, githubExportSchema, Input() (+7 more)
+Cohesion: 0.2
+Nodes (11): PreviewSettingsPopover(), PreviewSettingsPopoverProps, settingsSchema, useUpdateProjectSettings(), Input(), Popover(), PopoverContent(), PopoverDescription() (+3 more)
 
 ### Community 192 - "Community 192"
 Cohesion: 0.22
@@ -688,59 +691,51 @@ Cohesion: 0.38
 Nodes (5): EditorFileBreadcrumb(), useFilePath(), PathSegment, PathSegments(), PathSegmentsProps
 
 ### Community 199 - "Community 199"
-Cohesion: 0.19
-Nodes (8): inter, metadata, plexMono, AuthLoadingView(), convex, Providers(), ThemeProvider(), UnauthenticatedView()
+Cohesion: 0.18
+Nodes (9): inter, metadata, plexMono, plusJakarta, AuthLoadingView(), convex, Providers(), ThemeProvider() (+1 more)
 
 ### Community 200 - "Community 200"
-Cohesion: 0.07
-Nodes (19): Controls(), ControlsProps, Image(), ImageProps, Panel(), PanelProps, Toolbar(), ToolbarProps (+11 more)
+Cohesion: 0.43
+Nodes (5): ToggleGroup(), ToggleGroupContext, ToggleGroupItem(), Toggle(), toggleVariants
 
 ### Community 201 - "Community 201"
 Cohesion: 0.29
 Nodes (7): Empty(), EmptyContent(), EmptyDescription(), EmptyHeader(), EmptyMedia(), emptyMediaVariants, EmptyTitle()
 
 ### Community 202 - "Community 202"
-Cohesion: 0.24
-Nodes (10): PreviewTerminal(), PreviewTerminalProps, isLoadingStatus(), PreviewView(), PreviewViewProps, statusLabel(), useFiles(), useWebContainer() (+2 more)
+Cohesion: 0.4
+Nodes (4): PreviewTerminalChrome(), PreviewTerminalChromeProps, PreviewTerminal(), PreviewTerminalProps
 
 ### Community 203 - "Community 203"
 Cohesion: 0.4
 Nodes (4): Clerk dashboard, GitHub OAuth setup (Clerk), Local development, Required scope
 
-### Community 204 - "Community 204"
-Cohesion: 0.21
-Nodes (9): ConversationSidebar, ProjectIdLayout(), useConversations(), ActiveConversationContext, ActiveConversationContextValue, ActiveConversationProvider(), readStoredManual(), storageKey() (+1 more)
-
 ### Community 205 - "Community 205"
 Cohesion: 0.33
 Nodes (5): Clerk Billing (Pro plan), Code checks, code:typescript (const { has } = await auth();), Dashboard setup, Headers
-
-### Community 206 - "Community 206"
-Cohesion: 0.5
-Nodes (4): customBasicSetup(), foldChevron(), foldMarker(), uiwShell
 
 ### Community 207 - "Community 207"
 Cohesion: 0.5
 Nodes (4): PromptInputActionAddAttachments(), PromptInputActionAddScreenshot(), useOptionalProviderAttachments(), usePromptInputAttachments()
 
 ## Knowledge Gaps
-- **887 isolated node(s):** `eslintConfig`, `webContainerCoopHeaders`, `nextConfig`, `config`, `DEFAULT_PLACEHOLDER_TITLES` (+882 more)
+- **895 isolated node(s):** `eslintConfig`, `webContainerCoopHeaders`, `nextConfig`, `config`, `DEFAULT_PLACEHOLDER_TITLES` (+890 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **60 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **65 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `Community 170` to `Community 1`, `Community 2`, `Community 3`, `Community 6`, `Community 7`, `Community 27`, `Community 9`, `Community 12`, `Community 142`, `Community 143`, `Community 144`, `Community 17`, `Community 146`, `Community 147`, `Community 148`, `Community 21`, `Community 150`, `Community 151`, `Community 152`, `Community 153`, `Community 26`, `Community 154`, `Community 156`, `Community 29`, `Community 157`, `Community 159`, `Community 30`, `Community 33`, `Community 162`, `Community 155`, `Community 163`, `Community 165`, `Community 38`, `Community 39`, `Community 40`, `Community 160`, `Community 161`, `Community 41`, `Community 167`, `Community 168`, `Community 174`, `Community 175`, `Community 172`, `Community 177`, `Community 171`, `Community 180`, `Community 181`, `Community 182`, `Community 185`, `Community 186`, `Community 164`, `Community 187`, `Community 190`, `Community 191`, `Community 192`, `Community 194`, `Community 195`, `Community 70`, `Community 198`, `Community 200`, `Community 201`, `Community 202`, `Community 208`, `Community 16`, `Community 145`, `Community 149`, `Community 22`, `Community 24`?**
-  _High betweenness centrality (0.477) - this node is a cross-community bridge._
+- **Why does `cn()` connect `Community 6` to `Community 1`, `Community 2`, `Community 3`, `Community 7`, `Community 27`, `Community 9`, `Community 12`, `Community 142`, `Community 143`, `Community 144`, `Community 17`, `Community 146`, `Community 147`, `Community 148`, `Community 21`, `Community 150`, `Community 151`, `Community 152`, `Community 153`, `Community 26`, `Community 154`, `Community 156`, `Community 29`, `Community 157`, `Community 159`, `Community 30`, `Community 33`, `Community 162`, `Community 155`, `Community 163`, `Community 165`, `Community 38`, `Community 39`, `Community 40`, `Community 160`, `Community 161`, `Community 41`, `Community 170`, `Community 167`, `Community 174`, `Community 175`, `Community 168`, `Community 177`, `Community 172`, `Community 171`, `Community 180`, `Community 181`, `Community 182`, `Community 185`, `Community 186`, `Community 164`, `Community 187`, `Community 190`, `Community 191`, `Community 192`, `Community 194`, `Community 195`, `Community 70`, `Community 198`, `Community 200`, `Community 201`, `Community 202`, `Community 204`, `Community 206`, `Community 208`, `Community 209`, `Community 210`, `Community 211`, `Community 16`, `Community 145`, `Community 20`, `Community 149`, `Community 22`, `Community 24`?**
+  _High betweenness centrality (0.486) - this node is a cross-community bridge._
 - **Why does `convexFetch()` connect `Community 178` to `Community 0`, `Community 193`, `Community 5`, `Community 10`, `Community 15`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **Why does `Button()` connect `Community 41` to `Community 1`, `Community 2`, `Community 6`, `Community 7`, `Community 12`, `Community 143`, `Community 144`, `Community 17`, `Community 146`, `Community 147`, `Community 148`, `Community 21`, `Community 150`, `Community 151`, `Community 152`, `Community 149`, `Community 26`, `Community 154`, `Community 155`, `Community 29`, `Community 30`, `Community 159`, `Community 27`, `Community 161`, `Community 163`, `Community 38`, `Community 168`, `Community 170`, `Community 175`, `Community 177`, `Community 186`, `Community 187`, `Community 190`, `Community 191`, `Community 194`, `Community 202`, `Community 24`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+  _High betweenness centrality (0.055) - this node is a cross-community bridge._
+- **Why does `Button()` connect `Community 41` to `Community 1`, `Community 2`, `Community 6`, `Community 7`, `Community 12`, `Community 143`, `Community 144`, `Community 17`, `Community 146`, `Community 147`, `Community 148`, `Community 21`, `Community 150`, `Community 151`, `Community 152`, `Community 149`, `Community 26`, `Community 154`, `Community 155`, `Community 29`, `Community 30`, `Community 159`, `Community 24`, `Community 161`, `Community 163`, `Community 38`, `Community 168`, `Community 170`, `Community 172`, `Community 175`, `Community 177`, `Community 186`, `Community 187`, `Community 191`, `Community 194`, `Community 20`?**
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `webContainerCoopHeaders`, `nextConfig` to the rest of the system?**
-  _887 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _895 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.13 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.11 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**

@@ -6,6 +6,8 @@ import { Allotment } from "allotment";
 import dynamic from "next/dynamic";
 import { Loader2 } from "lucide-react";
 import { ActiveConversationProvider } from "@/features/chat/state/active-conversation";
+import { ChatPanelProvider, useChatPanel } from "@/features/chat/state/chat-panel";
+import { ConversationSidebarMobileSheet } from "@/features/chat/components/conversation-sidebar-mobile-sheet";
 
 const ConversationSidebar = dynamic(
   () =>
@@ -28,6 +30,46 @@ const MAX_SIDEBAR_WIDTH = 800;
 const DEFAULT_CONVERSATION_SIDEBAR_WIDTH = 400;
 const DEFAULT_MAIN_SIZE = 1000;
 
+function ProjectWorkspace({
+  children,
+  projectId,
+}: {
+  children: React.ReactNode;
+  projectId: Id<"project">;
+}) {
+  const { isDocked } = useChatPanel();
+
+  if (!isDocked) {
+    return (
+      <>
+        <div className="min-h-0 min-w-0 flex-1 overflow-hidden">{children}</div>
+        <ConversationSidebarMobileSheet />
+      </>
+    );
+  }
+
+  return (
+    <Allotment
+      defaultSizes={[DEFAULT_CONVERSATION_SIDEBAR_WIDTH, DEFAULT_MAIN_SIZE]}
+      proportionalLayout={false}
+      separator={true}
+    >
+      <Allotment.Pane
+        snap
+        minSize={MIN_SIDEBAR_WIDTH}
+        maxSize={MAX_SIDEBAR_WIDTH}
+        preferredSize={DEFAULT_CONVERSATION_SIDEBAR_WIDTH}
+        className="min-h-0"
+      >
+        <ConversationSidebar variant="dockLeft" />
+      </Allotment.Pane>
+      <Allotment.Pane preferredSize={DEFAULT_MAIN_SIZE} className="min-h-0 min-w-0">
+        {children}
+      </Allotment.Pane>
+    </Allotment>
+  );
+}
+
 export const ProjectIdLayout = ({
   children,
   projectId,
@@ -36,35 +78,14 @@ export const ProjectIdLayout = ({
   projectId: Id<"project">;
 }) => {
   return (
-    <div className="w-full h-screen flex flex-col">
-      <Navbar projectId={projectId} />
+    <div className="flex h-screen w-full flex-col">
       <ActiveConversationProvider projectId={projectId}>
-        <div className="flex flex-1 min-h-0 overflow-hidden">
-          <Allotment
-            defaultSizes={[
-              DEFAULT_CONVERSATION_SIDEBAR_WIDTH,
-              DEFAULT_MAIN_SIZE,
-            ]}
-            proportionalLayout={false}
-            separator={true}
-          >
-            <Allotment.Pane
-              snap
-              minSize={MIN_SIDEBAR_WIDTH}
-              maxSize={MAX_SIDEBAR_WIDTH}
-              preferredSize={DEFAULT_CONVERSATION_SIDEBAR_WIDTH}
-              className="min-h-0"
-            >
-              <ConversationSidebar variant="dockLeft" />
-            </Allotment.Pane>
-            <Allotment.Pane
-              preferredSize={DEFAULT_MAIN_SIZE}
-              className="min-h-0 min-w-0"
-            >
-              {children}
-            </Allotment.Pane>
-          </Allotment>
-        </div>
+        <ChatPanelProvider>
+          <Navbar projectId={projectId} />
+          <div className="flex min-h-0 flex-1 overflow-hidden">
+            <ProjectWorkspace projectId={projectId}>{children}</ProjectWorkspace>
+          </div>
+        </ChatPanelProvider>
       </ActiveConversationProvider>
     </div>
   );
