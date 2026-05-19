@@ -23,7 +23,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { CloudCheckIcon, LoaderIcon } from "lucide-react";
-import { formatDistanceToNow } from "date-fns";
+import { RelativeTime } from "@/components/relative-time";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -32,7 +32,7 @@ const font = Poppins({
 
 export const Navbar = ({ projectId }: { projectId: Id<"project"> }) => {
   const project = useProject(projectId);
-  const renameProject = useRenameProject(projectId);
+  const renameProject = useRenameProject({ projectId });
 
   const [isRenaming, setIsRenaming] = useState(false);
   const [name, setName] = useState("");
@@ -128,7 +128,9 @@ export const Navbar = ({ projectId }: { projectId: Id<"project"> }) => {
               </TooltipTrigger>
               <TooltipContent>
                 {project?.updatedAt ? (
-                  <p>Saved {formatDistanceToNow(project?.updatedAt, {addSuffix: true})}</p>
+                  <p>
+                    Saved <RelativeTime date={project.updatedAt} />
+                  </p>
                 ) : (
                   <p>Loading...</p>
                 )}

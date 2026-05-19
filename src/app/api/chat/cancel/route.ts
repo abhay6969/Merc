@@ -4,7 +4,7 @@ import { z } from "zod";
 import { sendInngestEvent } from "@/lib/inngest-send";
 
 const bodySchema = z.object({
-  assistantMessageId: z.string().min(1),
+  messageId: z.string().min(1),
   nonce: z.string().min(1),
 });
 

@@ -25,6 +25,8 @@ export function ConversationSidebarMessage({
   const isUser = message.role === "user";
   const isProcessing =
     message.role === "assistant" && message.status === "processing";
+  const isCancelled =
+    message.role === "assistant" && message.status === "cancelled";
 
   const modelLabel = useMemo(() => {
     if (message.role !== "assistant" || !message.modelId || isProcessing) {
@@ -55,13 +57,17 @@ export function ConversationSidebarMessage({
           <Shimmer className="text-sm text-muted-foreground">
             Thinking…
           </Shimmer>
+        ) : isCancelled ? (
+          <p className="text-muted-foreground text-sm italic">
+            {message.content || "Request cancelled"}
+          </p>
         ) : isUser ? (
           <p className="whitespace-pre-wrap">{message.content}</p>
         ) : (
           <MessageResponse>{message.content || " "}</MessageResponse>
         )}
       </MessageContent>
-      {!isUser && !isProcessing && message.content.length > 0 ? (
+      {!isUser && !isProcessing && !isCancelled && message.content.length > 0 ? (
         <MessageActions>
           <MessageAction
             tooltip={copied ? "Copied" : "Copy"}

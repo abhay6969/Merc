@@ -13,10 +13,11 @@ import {
 import { useConversations } from "../hooks/use-conversations";
 
 const STORAGE_PREFIX = "merc:activeConv:";
+const PENDING_CONV_PREFIX = "merc:pendingConv:";
 
 type ActiveConversationContextValue = {
   projectId: Id<"project">;
-  /** Resolved conversation for UI (manual pick or newest). */
+  /** Selected conversation, or null for draft "New chat". */
   activeConversationId: Id<"conversations"> | null;
   /** User-picked id; persisted in sessionStorage. */
   manualConversationId: Id<"conversations"> | null;
@@ -75,20 +76,26 @@ export function ActiveConversationProvider({
     [projectId],
   );
 
-  const sorted = useMemo(() => {
-    if (!conversations) return [];
-    return [...conversations].sort((a, b) => b.updatedAt - a.updatedAt);
-  }, [conversations]);
-
-  const newestId = sorted[0]?._id ?? null;
+  useEffect(() => {
+    try {
+      const pendingKey = `${PENDING_CONV_PREFIX}${projectId}`;
+      const pending = sessionStorage.getItem(pendingKey);
+      if (pending && pending.length > 0) {
+        setManualConversationIdState(pending as Id<"conversations">);
+        sessionStorage.removeItem(pendingKey);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, [projectId]);
 
   const activeConversationId = useMemo(() => {
-    if (manualConversationId) {
-      const exists = conversations?.some((c) => c._id === manualConversationId);
-      if (exists) return manualConversationId;
+    if (!manualConversationId) {
+      return null;
     }
-    return newestId;
-  }, [manualConversationId, conversations, newestId]);
+    const exists = conversations?.some((c) => c._id === manualConversationId);
+    return exists ? manualConversationId : null;
+  }, [manualConversationId, conversations]);
 
   useEffect(() => {
     if (

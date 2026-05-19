@@ -5,17 +5,38 @@ import { sentryMiddleware } from "@inngest/middleware-sentry";
 // Event payload types
 // ---------------------------------------------------------------------------
 
+/** Canonical `message.sent` payload (aliases accepted at parse time). */
 export type MessageSentData = {
-  assistantMessageId: string;
+  messageId: string;
   conversationId: string;
   projectId: string;
+  content: string;
   nonce: string;
   modelId: string;
 };
 
 export type MessageCancelData = {
-  assistantMessageId: string;
+  messageId: string;
   nonce: string;
+};
+
+export type ImportGitHubRepositoryData = {
+  projectId: string;
+  owner: string;
+  repo: string;
+  githubToken: string;
+};
+
+export type ExportToGitHubData = {
+  projectId: string;
+  repositoryName: string;
+  visibility: "public" | "private";
+  description?: string;
+  githubToken: string;
+};
+
+export type ExportCancelData = {
+  projectId: string;
 };
 
 const isDev = process.env.INNGEST_DEV === "1";

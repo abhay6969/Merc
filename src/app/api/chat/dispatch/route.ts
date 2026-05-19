@@ -1,17 +1,42 @@
 import { auth } from "@clerk/nextjs/server";
+import { after } from "next/server";
 import { NextResponse } from "next/server";
-import { z } from "zod";
+import { executeProcessMessage } from "@/features/conversations/ingest/process-message";
+import { messageSentEventSchema } from "@/features/conversations/ingest/types/message-sent";
 import { sendInngestEvent } from "@/lib/inngest-send";
 
-const bodySchema = z.object({
-  assistantMessageId: z.string().min(1),
-  conversationId: z.string().min(1),
-  projectId: z.string().min(1),
-  nonce: z.string().min(1),
-  modelId: z.string().min(1),
-});
+function isInngestDev(): boolean {
+  return process.env.INNGEST_DEV === "1";
+}
 
-/** Queue AI generation via Inngest (uses INNGEST_DEV locally; no event key in .env). */
+/** Skip Inngest and run in Next.js — no runs in the Inngest dashboard. */
+function useInlineProcessing(): boolean {
+  return isInngestDev() && process.env.INNGEST_INLINE === "1";
+}
+
+function scheduleInlineProcessing(
+  data: unknown,
+  label: "inline" | "inline-fallback",
+): void {
+  after(async () => {
+    try {
+      await executeProcessMessage(data);
+    } catch (err) {
+      console.error(`[dispatch] ${label} process-message failed:`, err);
+    }
+  });
+}
+
+/**
+ * Queue AI generation.
+ *
+ * Local dev (default): sends `message.sent` to the Inngest dev server so runs
+ * appear in the dashboard. Requires `npm run inngest:dev` in another terminal.
+ *
+ * Local dev (INNGEST_INLINE=1): runs in Next.js only — dashboard stays empty.
+ *
+ * Production: sends to Inngest Cloud.
+ */
 export async function POST(req: Request) {
   const { userId } = await auth();
   if (!userId) {
@@ -25,7 +50,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const parsed = bodySchema.safeParse(json);
+  const parsed = messageSentEventSchema.safeParse(json);
   if (!parsed.success) {
     return NextResponse.json(
       { error: "Invalid body", details: parsed.error.flatten() },
@@ -33,9 +58,32 @@ export async function POST(req: Request) {
     );
   }
 
+  const eventData = parsed.data;
+
   try {
-    await sendInngestEvent("message.sent", parsed.data);
-    return NextResponse.json({ ok: true });
+    if (useInlineProcessing()) {
+      scheduleInlineProcessing(eventData, "inline");
+      return NextResponse.json({ ok: true, mode: "inline" });
+    }
+
+    try {
+      await sendInngestEvent("message.sent", eventData);
+      return NextResponse.json({
+        ok: true,
+        mode: isInngestDev() ? "inngest-dev" : "inngest",
+      });
+    } catch (sendError) {
+      if (!isInngestDev()) {
+        throw sendError;
+      }
+      console.warn(
+        "[dispatch] Inngest dev server unreachable — falling back to inline. " +
+          "Start with: npm run inngest:dev",
+        sendError,
+      );
+      scheduleInlineProcessing(eventData, "inline-fallback");
+      return NextResponse.json({ ok: true, mode: "inline-fallback" });
+    }
   } catch (e) {
     const message = e instanceof Error ? e.message : "Dispatch failed";
     return NextResponse.json({ error: message }, { status: 502 });

@@ -32,7 +32,7 @@ export function ConversationSidebarMessages({
           <ConversationEmptyState
             description="Pick a model, ask a question, or try a starter below."
             icon={<MessageSquareIcon className="size-8" />}
-            title="Start a conversation"
+            title="New chat"
           >
             <Suggestions className="mt-2 max-w-full px-2">
               {CHAT_STARTER_SUGGESTIONS.map((suggestion) => (

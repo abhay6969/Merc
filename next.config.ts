@@ -1,8 +1,22 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
+const webContainerCoopHeaders = [
+  { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+] as const;
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  async headers() {
+    return [
+      // All document routes — required so client-side navigation from `/` still
+      // has crossOriginIsolated when opening Preview (WebContainer / SAB).
+      {
+        source: "/((?!api|_next|monitoring|.*\\..*).*)",
+        headers: [...webContainerCoopHeaders],
+      },
+    ];
+  },
 };
 
 export default withSentryConfig(nextConfig, {

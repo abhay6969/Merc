@@ -3,11 +3,46 @@
 import { Id } from "../../../../convex/_generated/dataModel";
 import { useProject } from "../hooks/use-projects";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Allotment } from "allotment";
-import FileExplorer from "./file-explorar";
-import { EditorView } from "@/features/editor/components/editor-view";
+import { ExportPopover } from "@/features/projects/components/export-popover";
+import { Loader2 } from "lucide-react";
+
+const PaneLoading = ({ label }: { label: string }) => (
+  <div className="flex h-full items-center justify-center gap-2 text-muted-foreground">
+    <Loader2 className="size-5 animate-spin" />
+    <p className="text-sm">{label}</p>
+  </div>
+);
+
+const FileExplorer = dynamic(() => import("./file-explorar"), {
+  ssr: false,
+  loading: () => <PaneLoading label="Loading files…" />,
+});
+
+const EditorView = dynamic(
+  () =>
+    import("@/features/editor/components/editor-view").then((mod) => ({
+      default: mod.EditorView,
+    })),
+  {
+    ssr: false,
+    loading: () => <PaneLoading label="Loading editor…" />,
+  },
+);
+
+const PreviewView = dynamic(
+  () =>
+    import("@/features/projects/components/preview-view").then((mod) => ({
+      default: mod.PreviewView,
+    })),
+  {
+    ssr: false,
+    loading: () => <PaneLoading label="Loading preview…" />,
+  },
+);
 
 const MIN_SIDEBAR_WIDTH = 200;
 const MAX_SIDEBAR_WIDTH = 800;
@@ -69,11 +104,19 @@ export const ProjectIdView = ({
             setActiveView("preview");
           }}
         />
-        <div className="flex-1 flex  justify-end h-full">
-          <div className="flex items-center justify-center h-full px-3 cursor-pointer bg-background text-muted-foreground border-l hover:bg-accent/30 gap-1.5">
-          <FaGithub className="size-3.5" />
-          <span className="text-sm">Export</span>
-          </div>
+        <div className="flex flex-1 justify-end h-full">
+          <ExportPopover
+            projectId={projectId}
+            trigger={
+              <button
+                type="button"
+                className="flex h-full cursor-pointer items-center justify-center gap-1.5 border-l bg-background px-3 text-muted-foreground hover:bg-accent/30"
+              >
+                <FaGithub className="size-3.5" />
+                <span className="text-sm">Export</span>
+              </button>
+            }
+          />
         </div>
       </nav>
       <div className="flex-1 relative">
@@ -109,7 +152,7 @@ export const ProjectIdView = ({
             activeView === "preview" ? "visible" : "invisible",
           )}
         >
-          <div>Preview</div>
+          <PreviewView projectId={projectId} enabled={activeView === "preview"} />
         </div>
       </div>
     </div>

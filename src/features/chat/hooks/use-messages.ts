@@ -12,7 +12,3 @@ export function useMessages(conversationId: Id<"conversations"> | null) {
 export function useSubmitUserPrompt() {
   return useMutation(api.messages.submitUserPrompt);
 }
-
-export function useRequestCancelGeneration() {
-  return useMutation(api.messages.requestCancelGeneration);
-}

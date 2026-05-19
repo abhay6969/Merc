@@ -4,12 +4,12 @@
     "hash": "dfa1f5f6a7037bf39dc510f30b180002"
   },
   "C:\\DEV\\merc\\next-env.d.ts": {
-    "mtime": 1770012477.764513,
-    "hash": "d0f8375ae1199dc7acd3977fc33b78b8"
+    "mtime": 1779184338.0134761,
+    "hash": "2a74d3909800ca5467fa83b0ab4a4890"
   },
   "C:\\DEV\\merc\\next.config.ts": {
-    "mtime": 1770184526.2183733,
-    "hash": "ca6766e1ea0dd4c7d3708bee191c2ef4"
+    "mtime": 1779182597.0102668,
+    "hash": "7723db63afa32786fdebec696fdbe063"
   },
   "C:\\DEV\\merc\\postcss.config.mjs": {
     "mtime": 1770011572.484045,
@@ -32,40 +32,44 @@
     "hash": "346671c6d6ce97b0b808b45af2a41c21"
   },
   "C:\\DEV\\merc\\convex\\conversations.ts": {
-    "mtime": 1778822729.714813,
-    "hash": "8004174a782770f834cba0774f773575"
+    "mtime": 1779086204.4202073,
+    "hash": "0bdc8ae932770e2b02c109b5c47a6cae"
   },
   "C:\\DEV\\merc\\convex\\files.ts": {
-    "mtime": 1778067790.48104,
-    "hash": "4871d028864243d5ca9b32b8195e525a"
+    "mtime": 1779105291.9481983,
+    "hash": "526c2711db0032319c6712fbdb9bab73"
   },
   "C:\\DEV\\merc\\convex\\http.ts": {
-    "mtime": 1778844344.908232,
-    "hash": "d29c521fd948c711ee0a20e3abb5fbfd"
+    "mtime": 1779183852.1410275,
+    "hash": "66d9a4b7d7e0c702146a573234739bab"
   },
   "C:\\DEV\\merc\\convex\\messages.ts": {
-    "mtime": 1778846615.315792,
-    "hash": "d0a9655dd1dd91498cae266101ad0988"
+    "mtime": 1779183841.7731082,
+    "hash": "700f907108ba92f8fe30a573403a1bdd"
   },
   "C:\\DEV\\merc\\convex\\projects.ts": {
-    "mtime": 1770373216.8867137,
-    "hash": "bdbf0833c954b26e97cb453f582b063a"
+    "mtime": 1779178135.303473,
+    "hash": "55eb11a71cbd1e0b3571517e8b56c8db"
   },
   "C:\\DEV\\merc\\convex\\schema.ts": {
-    "mtime": 1778822729.7168133,
-    "hash": "1d2ddacb9a00f4b4ff53ee9415f506af"
+    "mtime": 1779112254.4669516,
+    "hash": "09d534912aa6e05d4f291afea727653d"
+  },
+  "C:\\DEV\\merc\\convex\\system.ts": {
+    "mtime": 1779183835.5825238,
+    "hash": "560ceccf37febde677a299872af15fed"
   },
   "C:\\DEV\\merc\\convex\\lib\\chatModels.ts": {
-    "mtime": 1778846614.7711732,
-    "hash": "e995d7c0425c84fc01d9bde20d9a6ced"
+    "mtime": 1778908850.6653104,
+    "hash": "c524093dfba3c1a35354be0cca910aa2"
   },
   "C:\\DEV\\merc\\convex\\lib\\projectAccess.ts": {
     "mtime": 1778822729.7238135,
     "hash": "65a87a9f7a33b0771204cd795405fb8c"
   },
   "C:\\DEV\\merc\\convex\\_generated\\api.d.ts": {
-    "mtime": 1778843673.155415,
-    "hash": "1108bc21ddaf25ad06b2fb33948b9379"
+    "mtime": 1779178122.305337,
+    "hash": "ab0ae944fa712a39da67e442e78c015a"
   },
   "C:\\DEV\\merc\\convex\\_generated\\api.js": {
     "mtime": 1770018069.6940277,
@@ -84,7 +88,7 @@
     "hash": "cfc7a4ed084119abac0e51d79f525f4f"
   },
   "C:\\DEV\\merc\\src\\instrumentation-client.ts": {
-    "mtime": 1770184526.112463,
+    "mtime": 1770184529.1124623,
     "hash": "3a1f48e5e9b8e24e61eca7e46b03c45a"
   },
   "C:\\DEV\\merc\\src\\instrumentation.ts": {
@@ -92,47 +96,71 @@
     "hash": "f1a88b2d0309631d0c8c1987cd43c0bc"
   },
   "C:\\DEV\\merc\\src\\proxy.ts": {
-    "mtime": 1778843396.4869213,
-    "hash": "eeab2b4662d2312a65e08261b185afdf"
+    "mtime": 1779182604.392224,
+    "hash": "9e16312e189506d342b6e8c4f3f98d05"
   },
   "C:\\DEV\\merc\\src\\app\\global-error.tsx": {
     "mtime": 1770184526.2314153,
     "hash": "4c37831085c8a6bddee26fbcd9912368"
   },
   "C:\\DEV\\merc\\src\\app\\layout.tsx": {
-    "mtime": 1770358316.9633615,
-    "hash": "6aeb911dbc6bef3f84f53482d8f9afb4"
+    "mtime": 1779176392.981276,
+    "hash": "6f5940ccce77f0f8e47a606ad6066045"
   },
   "C:\\DEV\\merc\\src\\app\\page.tsx": {
     "mtime": 1770375093.5002553,
     "hash": "bb47972c6aaa6fdb502b2755a2f004f2"
   },
   "C:\\DEV\\merc\\src\\app\\api\\chat\\cancel\\route.ts": {
-    "mtime": 1778845006.5142791,
-    "hash": "f20c6e4e8a0bc19ba5c6e329c42f0be2"
+    "mtime": 1779101471.784603,
+    "hash": "4369acfbad2ded799b89d59624463769"
   },
   "C:\\DEV\\merc\\src\\app\\api\\chat\\dispatch\\route.ts": {
-    "mtime": 1778844997.578772,
-    "hash": "5e64714e38b336e20bb92f4b5199024e"
+    "mtime": 1779101226.1167967,
+    "hash": "cf10c4fd4a1963b6dd59580c2984481c"
   },
   "C:\\DEV\\merc\\src\\app\\api\\editor\\quick-edit\\route.ts": {
-    "mtime": 1778757295.1032531,
+    "mtime": 1778757298.103253,
     "hash": "ba5e6a3aa55fe0ee61c0ca89dc806c59"
   },
   "C:\\DEV\\merc\\src\\app\\api\\editor\\suggestions\\prompts.ts": {
     "mtime": 1778682154.6672528,
     "hash": "08bf430ab0ad87b84687e2103a391cf7"
   },
+  "C:\\DEV\\merc\\src\\app\\api\\github\\export\\route.ts": {
+    "mtime": 1779183865.4198718,
+    "hash": "703458c030d08fd2c8d709a56e69b531"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\github\\export\\cancel\\route.ts": {
+    "mtime": 1779178305.3629289,
+    "hash": "a25f196e7d583af4b589242e79a8f118"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\github\\export\\reset\\route.ts": {
+    "mtime": 1779178308.178705,
+    "hash": "af768d64f9e4dc38e7b1b90de56a0a00"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\github\\import\\route.ts": {
+    "mtime": 1779183862.2324073,
+    "hash": "251d95775ca957d4264fb08c9eb647dc"
+  },
   "C:\\DEV\\merc\\src\\app\\api\\inngest\\functions.ts": {
-    "mtime": 1778845777.579998,
-    "hash": "4be72dead01dad21dba02854facfd484"
+    "mtime": 1779178255.4313588,
+    "hash": "28112782b79b0acdac1b85c24ff5817c"
   },
   "C:\\DEV\\merc\\src\\app\\api\\inngest\\route.ts": {
-    "mtime": 1778838381.835298,
-    "hash": "0754b7b05b17cdb5179a507e5aa1d80d"
+    "mtime": 1779178254.3838756,
+    "hash": "f70cbc17c6adcd64782a5e8f1181c8c8"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\messages\\cancel\\route.ts": {
+    "mtime": 1779101473.16784,
+    "hash": "de32c45ce08dd7a64d00a425b1b8f18b"
+  },
+  "C:\\DEV\\merc\\src\\app\\api\\projects\\create-with-prompt\\route.ts": {
+    "mtime": 1779184885.8498373,
+    "hash": "e929db218d66daa89738901d24e45329"
   },
   "C:\\DEV\\merc\\src\\app\\api\\suggestion\\route.ts": {
-    "mtime": 1778755798.819792,
+    "mtime": 1778755802.819792,
     "hash": "9f0459f46f76635758d39f6026a7d078"
   },
   "C:\\DEV\\merc\\src\\app\\projects\\[projectId]\\layout.tsx": {
@@ -140,12 +168,16 @@
     "hash": "4ed0e9e19b4841092cd2ff6eeee5ed5a"
   },
   "C:\\DEV\\merc\\src\\app\\projects\\[projectId]\\page.tsx": {
-    "mtime": 1770377278.9089153,
+    "mtime": 1770377282.9089153,
     "hash": "ae123b54ece3d7bb4f5dbf917af25c78"
   },
   "C:\\DEV\\merc\\src\\components\\providers.tsx": {
-    "mtime": 1770358283.7510705,
-    "hash": "df32499293dba23412aeb187ecb13122"
+    "mtime": 1779176393.8394804,
+    "hash": "6b095c4102d71ad411632ec8d8fe946e"
+  },
+  "C:\\DEV\\merc\\src\\components\\relative-time.tsx": {
+    "mtime": 1779176714.5667503,
+    "hash": "736296b864eec5479bae2aae0bbccb67"
   },
   "C:\\DEV\\merc\\src\\components\\theme-provider.tsx": {
     "mtime": 1770012824.9015791,
@@ -180,7 +212,7 @@
     "hash": "03c1880a5f06ffd256fa0a4fa06bf252"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\code-block.tsx": {
-    "mtime": 1778836473.67873,
+    "mtime": 1778836477.6787295,
     "hash": "0bde4160e0b6d1120375b1cbec73a23d"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\commit.tsx": {
@@ -232,11 +264,11 @@
     "hash": "f1debc7eb419283b9dc11c0653298324"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\message.tsx": {
-    "mtime": 1778836476.802133,
-    "hash": "a443a10951d73505780d2a27d3266728"
+    "mtime": 1779183993.509096,
+    "hash": "cec690dac468630ab569e330983dad87"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\mic-selector.tsx": {
-    "mtime": 1778836477.059169,
+    "mtime": 1778836481.0591695,
     "hash": "f5cba7f1e8fbf697053b2958e163e450"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\model-selector.tsx": {
@@ -284,8 +316,8 @@
     "hash": "e3e4f41dc503ca592f7e70a523c7c190"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\schema-display.tsx": {
-    "mtime": 1778836480.1603637,
-    "hash": "6315099c501828c3c6ad38f1bba952a5"
+    "mtime": 1779183994.4756765,
+    "hash": "4e4a41215998b19e5e0bd9ea5c25070e"
   },
   "C:\\DEV\\merc\\src\\components\\ai-elements\\shimmer.tsx": {
     "mtime": 1778836480.4064674,
@@ -503,10 +535,6 @@
     "mtime": 1770012301.4078434,
     "hash": "42634c5e24aebafa3f4ce9c91960dbfe"
   },
-  "C:\\DEV\\merc\\src\\components\\ui\\resizable.tsx": {
-    "mtime": 1770012301.5157547,
-    "hash": "e6bc37b4f3397d034e51f987d66ebd48"
-  },
   "C:\\DEV\\merc\\src\\components\\ui\\scroll-area.tsx": {
     "mtime": 1778836469.6808324,
     "hash": "8bf02de15eee0da6e5942ea2ff1c64c3"
@@ -580,59 +608,203 @@
     "hash": "0427d58df16067f1675ea65735b13379"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\components\\conversation-sidebar-composer.tsx": {
-    "mtime": 1778836707.046245,
-    "hash": "a76ffd9512dfa57dcc6618345c031552"
+    "mtime": 1779184004.2057517,
+    "hash": "ed78d99000f06ab804d9b69316dc12d8"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\components\\conversation-sidebar-header.tsx": {
-    "mtime": 1778836737.5757086,
-    "hash": "fc2f5a93207841fdf3f4a3200c526323"
+    "mtime": 1779086769.8245647,
+    "hash": "bf62c22c9b31bad713e7ec40bba54427"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\components\\conversation-sidebar-message.tsx": {
-    "mtime": 1778846633.6064994,
-    "hash": "dd5cc82e0747dda84555c63b4b798646"
+    "mtime": 1779086783.7777696,
+    "hash": "2cacaceba54be6da303c445766e1bb24"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\components\\conversation-sidebar-messages.tsx": {
-    "mtime": 1778836645.2700152,
-    "hash": "2906297bdb2d8d8801603a87a830d0b0"
+    "mtime": 1779184885.1329076,
+    "hash": "c766cae48b93783af0587008a60dca42"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\components\\conversation-sidebar-model-picker.tsx": {
-    "mtime": 1778846630.2345335,
-    "hash": "095c403af26750f1cae7074a8fd6241a"
+    "mtime": 1778908850.6584513,
+    "hash": "3df25eae90275999b9525c01dd64fa24"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\components\\conversation-sidebar.tsx": {
-    "mtime": 1778843671.812934,
-    "hash": "f2fc99330832e7b4538b788ea2f03aca"
+    "mtime": 1779184933.878234,
+    "hash": "0ba4e5d56cfbbc44c131021a1555668d"
+  },
+  "C:\\DEV\\merc\\src\\features\\chat\\components\\past-conversations-dialog.tsx": {
+    "mtime": 1779086476.4518757,
+    "hash": "72f431ab907bb1fa9c9067a56537bb06"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\hooks\\use-conversations.ts": {
-    "mtime": 1778822729.719816,
-    "hash": "531285d13fbe9ac52984498723fa44f5"
+    "mtime": 1779183910.8249912,
+    "hash": "27ea73267025db21e8d0ec27fd7285d8"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\hooks\\use-messages.ts": {
-    "mtime": 1778822729.719816,
-    "hash": "ae76acb368577339a5123c0b45283ccb"
+    "mtime": 1779101476.6324248,
+    "hash": "d3dbf9d771c233c09f700b9875854a36"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\hooks\\use-selected-chat-model.ts": {
-    "mtime": 1778846633.6064994,
-    "hash": "87467d432df3f5d53e71b77f897016d1"
+    "mtime": 1779087492.9820976,
+    "hash": "ecf17d55f77c18d5d6119705d702c016"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\lib\\chat-models.ts": {
-    "mtime": 1778846614.7711732,
-    "hash": "4592137504abb62a79fc348a785983ba"
+    "mtime": 1778908850.6653104,
+    "hash": "fab4937caef22e1ea1834eb2b7ae18bc"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\lib\\chat-starters.ts": {
-    "mtime": 1778836629.0589633,
+    "mtime": 1778908850.6525695,
     "hash": "294cc4d271efcf68cf84d9ee2f26589f"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\lib\\dispatch-inngest.ts": {
-    "mtime": 1778843660.507956,
-    "hash": "aa439b11f0c8c803aa539f2d2832eae5"
+    "mtime": 1779101192.024064,
+    "hash": "47c8e23d9192015e281ed0ac0846d5ac"
   },
   "C:\\DEV\\merc\\src\\features\\chat\\state\\active-conversation.tsx": {
-    "mtime": 1778822729.7238135,
-    "hash": "3bf54af3aa84ce679e5ba8f5a8b9917a"
+    "mtime": 1779184934.2284355,
+    "hash": "c02c615ac4857d75e6c22442ef2c5340"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\constants.ts": {
+    "mtime": 1779109284.2727008,
+    "hash": "5e79246ad0f157ec30a4b9918ad223b1"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\convex-http.ts": {
+    "mtime": 1779105308.6761148,
+    "hash": "58f8b047c3d2d9b4b5275d1277943250"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\generate-title.ts": {
+    "mtime": 1779098928.5452623,
+    "hash": "27b074f566ada2da3b9642b3fecf5d21"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\process-message.ts": {
+    "mtime": 1779101115.5690625,
+    "hash": "a4fac35b2d2c0f2dbb98ab756b7603ee"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\types.ts": {
+    "mtime": 1779101513.5010269,
+    "hash": "702c51e7a8d82ac49ddb9901c3d0497b"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\agents\\coding-agent.ts": {
+    "mtime": 1779105878.1028752,
+    "hash": "2a83cc66c0d6a0dcf58e65ec6df3d4c7"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\agents\\title-agent.ts": {
+    "mtime": 1779086829.700713,
+    "hash": "8a1252fd7e2787e737be6576affc0d01"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\classify-tool-error.ts": {
+    "mtime": 1779109350.6894438,
+    "hash": "ac1c26443603b8df28aa57cd5189e138"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\extract-assistant-response.ts": {
+    "mtime": 1779086285.2165651,
+    "hash": "846dc96b1442b55adeb91da80118c43d"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\format-history.ts": {
+    "mtime": 1779101146.5694666,
+    "hash": "0ce7285d6a571fcd7b51f0cff3df5556"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\format-project-tree.ts": {
+    "mtime": 1779101020.3215394,
+    "hash": "7b32814f2fd53ee6f1e37a10d2fd5e57"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\google-api-key.ts": {
+    "mtime": 1779086290.060395,
+    "hash": "474735c69ff8656bd194c05596435b48"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\normalize-title.ts": {
+    "mtime": 1779086288.9556005,
+    "hash": "3c0456dbbb1ac7a44a000e62ec7bd596"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\lib\\synthesize-tool-response.ts": {
+    "mtime": 1779109333.1475985,
+    "hash": "08642b025cb2ce6170f480a990501d61"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\networks\\coding-network.ts": {
+    "mtime": 1779105882.274328,
+    "hash": "4022fd6f3e698a71a59ec6051987264a"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\create-file.ts": {
+    "mtime": 1779109302.2287936,
+    "hash": "2bd6585b4aef328c10abedc5279b0c19"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\create-files.ts": {
+    "mtime": 1779109306.626583,
+    "hash": "5de3b7ab24e24d240b46868beb805c72"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\create-folder.ts": {
+    "mtime": 1779109313.6595168,
+    "hash": "4476839e0e8a80464de6b951bbb6ead9"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\delete-file.ts": {
+    "mtime": 1779109326.1554976,
+    "hash": "7ffae8b78050d15e1b55b77fd2478413"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\index.ts": {
+    "mtime": 1779109357.9636512,
+    "hash": "acb53523a1af54f5f360a3121c4bb727"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\list-files.ts": {
+    "mtime": 1779109288.0794518,
+    "hash": "54732a470de855c87bc53ae7be6eb480"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\read-files.ts": {
+    "mtime": 1779109296.6491168,
+    "hash": "0cbb108aacc36ca633c93c333d7d9d1b"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\rename-file.ts": {
+    "mtime": 1779109319.6023593,
+    "hash": "28483a7b0b49cc2a23c85da8446b3956"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\tool-context.ts": {
+    "mtime": 1779109272.928368,
+    "hash": "aa284da354d5a7aede9771525c2e4b90"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\tools\\update-file.ts": {
+    "mtime": 1779109315.8427663,
+    "hash": "9a45bb365d8391b9f115d44becd33c3b"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\types\\message-sent.ts": {
+    "mtime": 1779101462.0401635,
+    "hash": "d585fab8dbc90766c29c8112763ca3c1"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\types\\pipeline.ts": {
+    "mtime": 1779101510.6875322,
+    "hash": "593acdfd93f42293c7190bd87894f22e"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\types\\tool-result.ts": {
+    "mtime": 1779109260.5292401,
+    "hash": "cb7954c56f7992a7520b3694fb3eea84"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\build-agent-context.ts": {
+    "mtime": 1779101511.304068,
+    "hash": "d230d75a348fbf161a803509f0b3ef28"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\cancellation.ts": {
+    "mtime": 1779101460.8282714,
+    "hash": "77d24e05c4fc257917cd76ccc7a33abb"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\execute-network.ts": {
+    "mtime": 1779109343.4533296,
+    "hash": "82c8a0257485e2d7b411b5db0ebb22b5"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\fetch-phase.ts": {
+    "mtime": 1779101509.390532,
+    "hash": "fe7bcc334bc26359989b2c4a110e461d"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\process-message-workflow.ts": {
+    "mtime": 1779101464.7849114,
+    "hash": "6d437241bd7cec039d9297d87260fbb9"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\save-result.ts": {
+    "mtime": 1779101097.9191852,
+    "hash": "923bb5069c988de3adbeae92c77a6602"
+  },
+  "C:\\DEV\\merc\\src\\features\\conversations\\ingest\\workflow\\title-generation.ts": {
+    "mtime": 1779101097.7058864,
+    "hash": "d487868e1cb677fb00e0b9b4f06fe7e9"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\components\\code-editor.tsx": {
-    "mtime": 1778760087.844872,
+    "mtime": 1778760091.844872,
     "hash": "e7304c52395a9f7949fed72ad1f7d190"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\components\\editor-file-breadcrumb.tsx": {
@@ -640,20 +812,20 @@
     "hash": "7c94e6becee53a5be8849b3fa3806764"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\components\\editor-view.tsx": {
-    "mtime": 1778757297.1002543,
-    "hash": "e3311a5c187b27a2a55e8ce46635d90b"
+    "mtime": 1779184943.4942305,
+    "hash": "19f94b603647529e3b90d1e5c6c1724b"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\components\\merc-logo.tsx": {
     "mtime": 1778682154.633254,
     "hash": "ae9706746c081f7aa0e144fad9b9cb52"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\components\\quick-edit-bar.tsx": {
-    "mtime": 1778760018.6597023,
+    "mtime": 1778760022.6597023,
     "hash": "93a16cbabb9a11e077e90333b4b41067"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\components\\top-navigation.tsx": {
-    "mtime": 1778571670.0955791,
-    "hash": "621cab01cf0335743d5c243c2da3e4fe"
+    "mtime": 1779184857.535129,
+    "hash": "b84b5feb6dee639f6b0396177d63661d"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\extensions\\custom-basic-setup.ts": {
     "mtime": 1778682154.6672528,
@@ -672,11 +844,11 @@
     "hash": "5b42e7890caf1b1283adf88d7693543b"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\extensions\\suggestions\\index.ts": {
-    "mtime": 1778682156.6332543,
+    "mtime": 1778682160.6332543,
     "hash": "0c7a9109c8970681fa295f1335adf5d0"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\extensions\\suggestions\\suggestion-extension.ts": {
-    "mtime": 1778757297.1022527,
+    "mtime": 1778757301.1022527,
     "hash": "ff6b3a0aa78d2e49e62db1861f61062d"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\extensions\\suggestions\\suggestion-fetcher.ts": {
@@ -684,24 +856,68 @@
     "hash": "1b1177cfa6ee802f3c83d07e1ecdcf6e"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\hooks\\use-editor.ts": {
-    "mtime": 1778571657.8884096,
+    "mtime": 1778571661.8884096,
     "hash": "9722b04437d91f90e1412150b0d0c78f"
   },
   "C:\\DEV\\merc\\src\\features\\editor\\store\\use-editor-store.ts": {
-    "mtime": 1778571648.5364769,
+    "mtime": 1778571652.5364769,
     "hash": "25dab244eef03014c728e781e13002a0"
   },
+  "C:\\DEV\\merc\\src\\features\\preview\\types.ts": {
+    "mtime": 1779172803.895587,
+    "hash": "4ba18c21fbcea02a25f1d0e7bf7e3329"
+  },
+  "C:\\DEV\\merc\\src\\features\\preview\\components\\preview-settings-popover.tsx": {
+    "mtime": 1779172803.9021075,
+    "hash": "9289e69b4b38ecbf5315d39a012bc736"
+  },
+  "C:\\DEV\\merc\\src\\features\\preview\\components\\preview-terminal.tsx": {
+    "mtime": 1779172803.9081087,
+    "hash": "9798f3ba6bd2150633c3ed246e70ff5e"
+  },
+  "C:\\DEV\\merc\\src\\features\\preview\\hooks\\use-webcontainer.ts": {
+    "mtime": 1779182610.4351954,
+    "hash": "1a40dc8c928716638444bf1729c3b366"
+  },
+  "C:\\DEV\\merc\\src\\features\\preview\\lib\\cross-origin-isolation.ts": {
+    "mtime": 1779182604.589957,
+    "hash": "3abb2c4d5896f02c2812488dc298dbe3"
+  },
+  "C:\\DEV\\merc\\src\\features\\preview\\utils\\file-tree.ts": {
+    "mtime": 1779172803.9071088,
+    "hash": "319014747f9cb2dd5dc466070fd56e64"
+  },
+  "C:\\DEV\\merc\\src\\features\\preview\\utils\\parse-command.ts": {
+    "mtime": 1779172803.8970978,
+    "hash": "f32836352a6a777b1a4cadc04fd1ec04"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\export-popover.tsx": {
+    "mtime": 1779184085.2646325,
+    "hash": "44193424152e3bf8b2752bdb17abbd62"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\import-github-dialog.tsx": {
+    "mtime": 1779184085.0938947,
+    "hash": "e5bc986ba9468db7479394666471fb8d"
+  },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\navbar.tsx": {
-    "mtime": 1770376561.1742928,
-    "hash": "6c8924a96143991df892bd4d55b8a1fb"
+    "mtime": 1779176418.3705752,
+    "hash": "2f6185b82a3bb611bbd20d41a8f4961a"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\new-project-dialog.tsx": {
+    "mtime": 1779184895.9490519,
+    "hash": "e04a5e37d696062da000ded7364b7e15"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\components\\preview-view.tsx": {
+    "mtime": 1779182678.7645078,
+    "hash": "d8900eb1b754d60be153101caebf44e3"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\project-id-layout.tsx": {
-    "mtime": 1778822730.7118144,
-    "hash": "619be6e3cdc9600568cfd6274cf94275"
+    "mtime": 1779176413.1432676,
+    "hash": "140e8bd841a7e1963b20597fe54214aa"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\project-id-view.tsx": {
-    "mtime": 1778822730.7138128,
-    "hash": "0450de99aba6280b720ca4dfb7cd9b17"
+    "mtime": 1779178444.1208012,
+    "hash": "b978ce22eab8dc0ea86087875c05f379"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\projects-commands-dialong.tsx": {
     "mtime": 1770373271.4239254,
@@ -712,8 +928,8 @@
     "hash": "f2a64598772fed3c0ed95298926ab5d2"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\projects-view.tsx": {
-    "mtime": 1770357964.462816,
-    "hash": "575dbe936934ae258d6dec9a9796619b"
+    "mtime": 1779183960.505625,
+    "hash": "efebf3b4fae0af9dd3ef5f1074386d86"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\constants.ts": {
     "mtime": 1777901325.441991,
@@ -724,8 +940,8 @@
     "hash": "775bbfcc2403b173e0bb1e3c41e894db"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\index.tsx": {
-    "mtime": 1777987964.718995,
-    "hash": "baec1442ffc8308d1bc518553aa19cbf"
+    "mtime": 1779184932.8621058,
+    "hash": "65e28055902d4335b5549960262ea497"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\loading-row.tsx": {
     "mtime": 1777902137.090352,
@@ -736,28 +952,64 @@
     "hash": "0b6cd1cfed54aa638e5655e70eff4b67"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\tree-item-wrapper.tsx": {
-    "mtime": 1778067212.3204336,
+    "mtime": 1778067216.3204336,
     "hash": "b9f7f851ab7b9b42444a024a00468d13"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\components\\file-explorar\\tree.tsx": {
-    "mtime": 1778067276.9911697,
-    "hash": "75ff8b076cc6363bc415cef1805af81a"
+    "mtime": 1779183908.5590904,
+    "hash": "b637c11d43a143771b47af170ae446c0"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\hooks\\use-files.ts": {
-    "mtime": 1778682154.6672528,
-    "hash": "4b192ffac0c2449393e0f5fe7cdcda33"
+    "mtime": 1779183903.3618333,
+    "hash": "e15b8f067fc37cd0b199d522d2a2bf7c"
   },
   "C:\\DEV\\merc\\src\\features\\projects\\hooks\\use-projects.ts": {
-    "mtime": 1778581902.343888,
+    "mtime": 1778581906.343888,
     "hash": "a57c8c4c424878519a7ea4734181c9b9"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\hooks\\use-update-project-settings.ts": {
+    "mtime": 1779172803.9021075,
+    "hash": "ba661b26a15da924ffa4dd502609a9d8"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\inngest\\export-to-github.ts": {
+    "mtime": 1779178236.7387862,
+    "hash": "6115c7208b09ab70bfa803acd9ccbed6"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\inngest\\import-github-repository.ts": {
+    "mtime": 1779178225.4641137,
+    "hash": "40d1f05a4e3b7a970f39629a8b3057d9"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\lib\\build-file-paths.ts": {
+    "mtime": 1779178206.231503,
+    "hash": "bba4bf40b822677d6f07c4d81a2f41c4"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\lib\\github-convex.ts": {
+    "mtime": 1779178200.8532455,
+    "hash": "0f6ba1caa76b093ce0230ee8f50beb6a"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\lib\\github-repo-name.ts": {
+    "mtime": 1779178203.128972,
+    "hash": "1732339a83b843bb85fce5b299c769f0"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\lib\\parse-github-url.ts": {
+    "mtime": 1779178187.612024,
+    "hash": "f59ca1a9c919231440d9ea67c093272a"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\lib\\sort-files.ts": {
+    "mtime": 1779183841.7822683,
+    "hash": "0e54e5327ed00f41182519d99de1f85e"
+  },
+  "C:\\DEV\\merc\\src\\features\\projects\\lib\\verify-project-owner.ts": {
+    "mtime": 1779178295.2714608,
+    "hash": "2427b5234767d9ca27797ef6df0847ff"
   },
   "C:\\DEV\\merc\\src\\hooks\\use-mobile.ts": {
     "mtime": 1770012303.3878012,
     "hash": "209b5193af16624cdd89d3591480dd48"
   },
   "C:\\DEV\\merc\\src\\inngest\\client.ts": {
-    "mtime": 1778845004.6248581,
-    "hash": "014c2cd2b3ad1a87a099f561a2db5a3c"
+    "mtime": 1779178251.276682,
+    "hash": "73d3d4dc6bf4d876df12342b9f4f50bb"
   },
   "C:\\DEV\\merc\\src\\lib\\editor-doc-scrape.ts": {
     "mtime": 1778757295.0992541,
@@ -768,8 +1020,16 @@
     "hash": "da7d28da008ce0da8f8952feaf0acfaa"
   },
   "C:\\DEV\\merc\\src\\lib\\inngest-send.ts": {
-    "mtime": 1778844994.2038102,
+    "mtime": 1778908846.6525693,
     "hash": "8f20650d7952983b41c8fda509ed3fed"
+  },
+  "C:\\DEV\\merc\\src\\lib\\pro-plan.ts": {
+    "mtime": 1779184085.2656417,
+    "hash": "c23abace2809b346ca507e9663a8f3d7"
+  },
+  "C:\\DEV\\merc\\src\\lib\\require-pro-plan.ts": {
+    "mtime": 1779184085.0938947,
+    "hash": "145b0c0830bfdb123dbfa2713f353ce5"
   },
   "C:\\DEV\\merc\\src\\lib\\utils.ts": {
     "mtime": 1770012179.0203924,
@@ -782,6 +1042,14 @@
   "C:\\DEV\\merc\\README.md": {
     "mtime": 1770011572.4474542,
     "hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "C:\\DEV\\merc\\docs\\BILLING.md": {
+    "mtime": 1779184016.7927232,
+    "hash": "f92a410d95a6f3d57154ddfb8e173180"
+  },
+  "C:\\DEV\\merc\\docs\\GITHUB_SETUP.md": {
+    "mtime": 1779178448.3844056,
+    "hash": "a34222f4a790e667c70b3a4ca4af2d76"
   },
   "C:\\DEV\\merc\\public\\file.svg": {
     "mtime": 1770011572.4900458,

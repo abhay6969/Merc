@@ -18,8 +18,9 @@ const FileExplorer = ({projectId}:{projectId:Id<"project">}) => {
   const project = useProject(projectId);
   const rootFiles = useFolderContents({projectId, enabled:open})
 
-  const createFile = useCreateFile();
-  const createFolder = useCreateFolder();
+  const rootScope = { projectId, parentId: undefined as Id<"files"> | undefined };
+  const createFile = useCreateFile(rootScope);
+  const createFolder = useCreateFolder(rootScope);
   const handleCreate = (name:string)=>{
     setCreating(null);
     if(creating === "file"){
@@ -39,8 +40,8 @@ const FileExplorer = ({projectId}:{projectId:Id<"project">}) => {
     setOpen(false);
   }
   return (
-    <div className="h-full bg-sidebar">
-      <ScrollArea>
+    <div className="flex h-full min-h-0 flex-col overflow-hidden bg-sidebar">
+      <ScrollArea className="h-0 min-h-0 flex-1">
         <div
           role="button"
           onClick={() => {

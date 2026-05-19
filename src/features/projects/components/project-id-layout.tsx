@@ -3,9 +3,25 @@
 import { Id } from "../../../../convex/_generated/dataModel";
 import Navbar from "./navbar";
 import { Allotment } from "allotment";
-import "allotment/dist/style.css";
+import dynamic from "next/dynamic";
+import { Loader2 } from "lucide-react";
 import { ActiveConversationProvider } from "@/features/chat/state/active-conversation";
-import { ConversationSidebar } from "@/features/chat/components/conversation-sidebar";
+
+const ConversationSidebar = dynamic(
+  () =>
+    import("@/features/chat/components/conversation-sidebar").then((mod) => ({
+      default: mod.ConversationSidebar,
+    })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-full items-center justify-center gap-2 border-r bg-sidebar text-muted-foreground">
+        <Loader2 className="size-5 animate-spin" />
+        <p className="text-sm">Loading chat…</p>
+      </div>
+    ),
+  },
+);
 
 const MIN_SIDEBAR_WIDTH = 200;
 const MAX_SIDEBAR_WIDTH = 800;

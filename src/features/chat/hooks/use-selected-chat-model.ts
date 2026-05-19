@@ -20,8 +20,8 @@ export function useSelectedChatModel(projectId: Id<"project">) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const raw = sessionStorage.getItem(storageKey);
-    if (raw && CHAT_MODEL_OPTIONS.some((opt) => opt.id === raw)) {
-      setSelectedModelId(raw as ChatModelId);
+    if (raw && SIDEBAR_CHAT_MODEL_OPTIONS.some((opt) => opt.id === raw)) {
+      setTimeout(() => setSelectedModelId(raw as ChatModelId), 0);
     }
   }, [storageKey]);
 

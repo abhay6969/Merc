@@ -44,7 +44,7 @@ export function ConversationSidebarComposer({
   return (
     <div className="shrink-0 border-t border-border/60 bg-background/80 backdrop-blur-sm">
       <PromptInput
-        className="border-0 bg-transparent shadow-none"
+        className="rounded-xl border border-border/70 bg-muted/25 shadow-sm"
         onSubmit={handleSubmit}
       >
         <PromptInputBody>

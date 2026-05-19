@@ -1,19 +1,19 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { toast } from "sonner";
 import { useActiveConversationContext } from "../state/active-conversation";
-import { useConversation, useCreateConversation } from "../hooks/use-conversations";
+import { useConversation } from "../hooks/use-conversations";
 import {
   useMessages,
-  useRequestCancelGeneration,
   useSubmitUserPrompt,
 } from "../hooks/use-messages";
 import { useSelectedChatModel } from "../hooks/use-selected-chat-model";
 import {
   dispatchMessageCancel,
   dispatchMessageSent,
+  dispatchProjectCancel,
 } from "../lib/dispatch-inngest";
 import { ConversationSidebarComposer } from "./conversation-sidebar-composer";
 import { ConversationSidebarHeader } from "./conversation-sidebar-header";
@@ -39,11 +39,14 @@ export function ConversationSidebar({
   } = useActiveConversationContext();
 
   const conversation = useConversation(activeConversationId);
-  const messages = useMessages(activeConversationId);
-  const createConversation = useCreateConversation();
+  const messagesQuery = useMessages(activeConversationId);
+  const messages = useMemo(
+    () => (activeConversationId === null ? [] : messagesQuery),
+    [activeConversationId, messagesQuery],
+  );
   const submitPrompt = useSubmitUserPrompt();
-  const cancelGeneration = useRequestCancelGeneration();
   const { selectedModelId, setSelectedModelId } = useSelectedChatModel(projectId);
+  const isSubmittingRef = useRef(false);
 
   const processingAssistantId = useMemo(() => {
     if (!messages?.length) return null;
@@ -57,47 +60,52 @@ export function ConversationSidebar({
   const isProcessing = processingAssistantId !== null;
 
   const title = !activeConversationId
-    ? "Chat"
+    ? "New chat"
     : conversation === undefined
       ? "Loading…"
       : conversation === null
-        ? "Chat"
+        ? "New chat"
         : conversation.title;
 
-  const handleNewChat = useCallback(async () => {
-    try {
-      const id = await createConversation({
-        projectId,
-        title: "New chat",
-      });
-      setManualConversationId(id);
-      toast.success("New conversation");
-    } catch (e) {
-      toast.error(e instanceof Error ? e.message : "Could not create chat");
-    }
-  }, [createConversation, projectId, setManualConversationId]);
+  const handleNewChat = useCallback(() => {
+    setManualConversationId(null);
+  }, [setManualConversationId]);
 
   const handleSubmit = useCallback(
     async (text: string) => {
+      if (isSubmittingRef.current) return;
+      isSubmittingRef.current = true;
       try {
         const result = await submitPrompt({
           projectId,
           conversationId: activeConversationId ?? undefined,
           content: text,
-          newConversationTitle: undefined,
+          newConversationTitle: activeConversationId ? undefined : "New chat",
           modelId: selectedModelId,
         });
         setManualConversationId(result.conversationId);
+
         await dispatchMessageSent({
-          assistantMessageId: result.assistantMessageId,
+          messageId: result.assistantMessageId,
           conversationId: result.conversationId,
           projectId,
           nonce: result.nonce,
           modelId: result.modelId,
+          content: text,
         });
+
+        for (const job of result.cancelledJobs ?? []) {
+          if (job.assistantMessageId === result.assistantMessageId) continue;
+          await dispatchMessageCancel({
+            messageId: job.assistantMessageId,
+            nonce: job.nonce,
+          });
+        }
       } catch (e) {
         toast.error(e instanceof Error ? e.message : "Send failed");
         throw e;
+      } finally {
+        isSubmittingRef.current = false;
       }
     },
     [
@@ -110,24 +118,13 @@ export function ConversationSidebar({
   );
 
   const handleStop = useCallback(async () => {
-    if (!processingAssistantId || !messages?.length) return;
-    const processingMsg = messages.find((m) => m._id === processingAssistantId);
-    const nonce = processingMsg?.generationNonce;
     try {
-      const result = await cancelGeneration({
-        assistantMessageId: processingAssistantId,
-      });
-      if (result.cancelled && nonce) {
-        await dispatchMessageCancel({
-          assistantMessageId: processingAssistantId,
-          nonce,
-        });
-      }
+      await dispatchProjectCancel(projectId);
       toast.message("Generation stopped");
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Stop failed");
     }
-  }, [cancelGeneration, messages, processingAssistantId]);
+  }, [projectId]);
 
   const handleSuggestionClick = useCallback(
     (suggestion: string) => {

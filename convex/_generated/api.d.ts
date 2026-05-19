@@ -16,6 +16,7 @@ import type * as lib_chatModels from "../lib/chatModels.js";
 import type * as lib_projectAccess from "../lib/projectAccess.js";
 import type * as messages from "../messages.js";
 import type * as projects from "../projects.js";
+import type * as system from "../system.js";
 
 import type {
   ApiFromModules,
@@ -32,6 +33,7 @@ declare const fullApi: ApiFromModules<{
   "lib/projectAccess": typeof lib_projectAccess;
   messages: typeof messages;
   projects: typeof projects;
+  system: typeof system;
 }>;
 
 /**
