@@ -21,10 +21,18 @@ export const Tree = ({
     const [isRenaming, setIsRenaming] = useState(false);
     const [creating, setCreating] = useState<"file" | "folder" | null>(null);
 
-    const renameFile = useRenameFile();
-    const deleteFile = useDeleteFile();
-    const createFile = useCreateFile();
-    const createFolder = useCreateFolder();
+    const folderScope = {
+      projectId,
+      parentId: item.parentId,
+    };
+    const childScope = {
+      projectId,
+      parentId: item._id,
+    };
+    const renameFile = useRenameFile(folderScope);
+    const deleteFile = useDeleteFile(folderScope);
+    const createFile = useCreateFile(childScope);
+    const createFolder = useCreateFolder(childScope);
 
     const {openFile, closeTab, activeTab} = useEditor(projectId);
 

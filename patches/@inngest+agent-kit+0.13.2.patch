@@ -1,0 +1,81 @@
+diff --git a/node_modules/@inngest/agent-kit/dist/chunk-BSWKEFTT.js b/node_modules/@inngest/agent-kit/dist/chunk-BSWKEFTT.js
+index 50538d4..2df104e 100644
+--- a/node_modules/@inngest/agent-kit/dist/chunk-BSWKEFTT.js
++++ b/node_modules/@inngest/agent-kit/dist/chunk-BSWKEFTT.js
+@@ -658,18 +658,20 @@ var responseParser4 = (input) => {
+           content: content.text
+         });
+       } else if (candidate.content.role === "model" && "functionCall" in content) {
++        const toolMsg = {
++          name: content.functionCall.name,
++          input: content.functionCall.args,
++          type: "tool",
++          id: content.functionCall.name
++        };
++        if (content.thoughtSignature) {
++          toolMsg.thoughtSignature = content.thoughtSignature;
++        }
+         messages.push({
+           role: "assistant",
+           type: "tool_call",
+           stop_reason: "tool",
+-          tools: [
+-            {
+-              name: content.functionCall.name,
+-              input: content.functionCall.args,
+-              type: "tool",
+-              id: content.functionCall.name
+-            }
+-          ]
++          tools: [toolMsg]
+         });
+       } else if (candidate.content.role === "user" && "functionResponse" in content) {
+         messages.push({
+@@ -706,14 +708,18 @@ var messageToContent = (m) => {
+           }
+           return {
+             role: "model",
+-            parts: [
+-              {
++            parts: m.tools.map((tool) => {
++              const part = {
+                 functionCall: {
+-                  name: m.tools[0].name,
+-                  args: m.tools[0].input
++                  name: tool.name,
++                  args: tool.input
+                 }
++              };
++              if (tool.thoughtSignature) {
++                part.thoughtSignature = tool.thoughtSignature;
+               }
+-            ]
++              return part;
++            })
+           };
+         case "text":
+         default:
+@@ -730,14 +736,18 @@ var messageToContent = (m) => {
+           }
+           return {
+             role: "model",
+-            parts: [
+-              {
++            parts: m.tools.map((tool) => {
++              const part = {
+                 functionCall: {
+-                  name: m.tools[0].name,
+-                  args: m.tools[0].input
++                  name: tool.name,
++                  args: tool.input
+                 }
++              };
++              if (tool.thoughtSignature) {
++                part.thoughtSignature = tool.thoughtSignature;
+               }
+-            ]
++              return part;
++            })
+           };
+         case "text":
+         default:

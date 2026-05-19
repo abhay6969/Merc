@@ -86,7 +86,10 @@ export const TopNavigation = ({
   }
 
   return (
-    <div className="flex min-h-9 flex-1 min-w-0 items-end overflow-x-auto border-b bg-muted/20 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <div
+      className="flex h-9 min-h-9 w-full min-w-0 items-end overflow-x-auto overflow-y-hidden border-b bg-muted/20"
+      role="tablist"
+    >
       {openTabs.map((fileId) => (
         <EditorTab key={fileId} fileId={fileId} projectId={projectId} />
       ))}

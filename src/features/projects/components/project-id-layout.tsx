@@ -3,12 +3,30 @@
 import { Id } from "../../../../convex/_generated/dataModel";
 import Navbar from "./navbar";
 import { Allotment } from "allotment";
-import "allotment/dist/style.css";
+import dynamic from "next/dynamic";
+import { Loader2 } from "lucide-react";
+import { ActiveConversationProvider } from "@/features/chat/state/active-conversation";
+
+const ConversationSidebar = dynamic(
+  () =>
+    import("@/features/chat/components/conversation-sidebar").then((mod) => ({
+      default: mod.ConversationSidebar,
+    })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-full items-center justify-center gap-2 border-r bg-sidebar text-muted-foreground">
+        <Loader2 className="size-5 animate-spin" />
+        <p className="text-sm">Loading chat…</p>
+      </div>
+    ),
+  },
+);
 
 const MIN_SIDEBAR_WIDTH = 200;
 const MAX_SIDEBAR_WIDTH = 800;
 const DEFAULT_CONVERSATION_SIDEBAR_WIDTH = 400;
-const DEFAULT_MAIN_SIZE =1000
+const DEFAULT_MAIN_SIZE = 1000;
 
 export const ProjectIdLayout = ({
   children,
@@ -18,31 +36,36 @@ export const ProjectIdLayout = ({
   projectId: Id<"project">;
 }) => {
   return (
-    <div className=" w-full h-screen flex flex-col">
+    <div className="w-full h-screen flex flex-col">
       <Navbar projectId={projectId} />
-      <div className="flex-1 flex overflow-hidden">
-        <Allotment
-          defaultSizes={[DEFAULT_CONVERSATION_SIDEBAR_WIDTH, DEFAULT_MAIN_SIZE]}
-          proportionalLayout={false}
-          separator={true}
-          sizes={[DEFAULT_CONVERSATION_SIDEBAR_WIDTH, DEFAULT_MAIN_SIZE]}
-          onDragEnd={(sizes) => {
-            console.log(sizes);
-          }}
-        >
-          <Allotment.Pane
-            snap
-            minSize={MIN_SIDEBAR_WIDTH}
-            maxSize={MAX_SIDEBAR_WIDTH}
-            preferredSize={DEFAULT_CONVERSATION_SIDEBAR_WIDTH}
+      <ActiveConversationProvider projectId={projectId}>
+        <div className="flex flex-1 min-h-0 overflow-hidden">
+          <Allotment
+            defaultSizes={[
+              DEFAULT_CONVERSATION_SIDEBAR_WIDTH,
+              DEFAULT_MAIN_SIZE,
+            ]}
+            proportionalLayout={false}
+            separator={true}
           >
-            <div className="w-full h-full ">Conversation Sidebar</div>
-          </Allotment.Pane>
-          <Allotment.Pane preferredSize={DEFAULT_MAIN_SIZE}>
-            {children}
-          </Allotment.Pane>
-        </Allotment>
-      </div>
+            <Allotment.Pane
+              snap
+              minSize={MIN_SIDEBAR_WIDTH}
+              maxSize={MAX_SIDEBAR_WIDTH}
+              preferredSize={DEFAULT_CONVERSATION_SIDEBAR_WIDTH}
+              className="min-h-0"
+            >
+              <ConversationSidebar variant="dockLeft" />
+            </Allotment.Pane>
+            <Allotment.Pane
+              preferredSize={DEFAULT_MAIN_SIZE}
+              className="min-h-0 min-w-0"
+            >
+              {children}
+            </Allotment.Pane>
+          </Allotment>
+        </div>
+      </ActiveConversationProvider>
     </div>
   );
 };
